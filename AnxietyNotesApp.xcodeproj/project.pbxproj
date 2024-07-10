@@ -11,6 +11,7 @@
 		5F7C4DE72C3BF43E00182C18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DE62C3BF43E00182C18 /* ContentView.swift */; };
 		5F7C4DE92C3BF43F00182C18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F7C4DE82C3BF43F00182C18 /* Assets.xcassets */; };
 		5F7C4DED2C3BF43F00182C18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F7C4DEC2C3BF43F00182C18 /* Preview Assets.xcassets */; };
+		D9AB17192C3E587400BDF07D /* OpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AB17182C3E587400BDF07D /* OpenAI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		5F7C4DE82C3BF43F00182C18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F7C4DEA2C3BF43F00182C18 /* AnxietyNotesApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnxietyNotesApp.entitlements; sourceTree = "<group>"; };
 		5F7C4DEC2C3BF43F00182C18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D9AB17182C3E587400BDF07D /* OpenAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				5F7C4DE42C3BF43E00182C18 /* AnxietyNotesAppApp.swift */,
 				5F7C4DE62C3BF43E00182C18 /* ContentView.swift */,
+				D9AB17182C3E587400BDF07D /* OpenAI.swift */,
 				5F7C4DE82C3BF43F00182C18 /* Assets.xcassets */,
 				5F7C4DEA2C3BF43F00182C18 /* AnxietyNotesApp.entitlements */,
 				5F7C4DEB2C3BF43F00182C18 /* Preview Content */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9AB17192C3E587400BDF07D /* OpenAI.swift in Sources */,
 				5F7C4DE72C3BF43E00182C18 /* ContentView.swift in Sources */,
 				5F7C4DE52C3BF43E00182C18 /* AnxietyNotesAppApp.swift in Sources */,
 			);
