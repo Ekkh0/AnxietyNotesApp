@@ -8,6 +8,7 @@
 
     },
     "BLABLABLABLALBALBLA" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -16,6 +17,9 @@
           }
         }
       }
+    },
+    "Diary" : {
+
     },
     "Happy" : {
 

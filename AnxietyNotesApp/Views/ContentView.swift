@@ -19,12 +19,22 @@ struct ContentView: View {
                 .foregroundStyle(.tint)
             Text(LocalizedStringKey("Welcome"))
             Text(LocalizedStringKey("Home"))
+            TextField("Diary", text: $viewModel.text)
+                .onChange(of: viewModel.text) { oldValue, newValue in
+                    if viewModel.text.last == "."{
+                        if let sentence = viewModel.text.lastSentence(){
+                            viewModel.feeling = viewModel.indoModel?.predictedLabel(for: sentence) ?? "neutral"
+                        }
+                    }
+                }
         }
         .onChange(of: viewModel.feeling){
-            viewModel.bgColor = Feelings(rawValue: viewModel.feeling)
-            print(viewModel.indoModel?.predictedLabel(for: "Sebel banget sama orang tolol!") as Any)
+            print(viewModel.feeling as Any)
+            withAnimation {
+                viewModel.bgColor = Feelings(label: viewModel.feeling)?.bgColor
+            }
         }
-        .background(viewModel.bgColor?.bgColor)
+        .background(viewModel.bgColor)
         .padding()
         
         HStack{

@@ -9,16 +9,37 @@ import Foundation
 import SwiftUI
 
 enum Feelings: String{
-    case happy, angry, anxious
+    case neutral, happy, sad, fear, anger
     
     var bgColor: Color {
         switch self{
         case .happy:
             return .yellow
-        case .angry:
+        case .anger:
             return .red
-        case .anxious:
-            return .orange
+        case .fear:
+            return .purple
+        case .neutral:
+            return .white
+        case .sad:
+            return .blue
+        }
+    }
+    
+    init?(label: String?) {
+        switch label?.lowercased() {
+        case "neutral":
+            self = .neutral
+        case "joy":
+            self = .happy
+        case "sad", "sadness":
+            self = .sad
+        case "fear":
+            self = .fear
+        case "Anger":
+            self = .anger
+        default:
+            return nil
         }
     }
 }
