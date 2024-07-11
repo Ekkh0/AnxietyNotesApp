@@ -1,0 +1,62 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Angry" : {
+
+    },
+    "Anxious" : {
+
+    },
+    "BLABLABLABLALBALBLA" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ini bla bla bla tapi di indonesia"
+          }
+        }
+      }
+    },
+    "Happy" : {
+
+    },
+    "Home" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is home in english"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ini home di indonesia"
+          }
+        }
+      }
+    },
+    "ParagrafDescription" : {
+      "extractionState" : "manual"
+    },
+    "Welcome" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is welcome in english"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ini welcome di bahasa indonesia"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
