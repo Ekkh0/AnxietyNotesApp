@@ -13,50 +13,56 @@ struct ContentView: View {
     @State private var viewModel = ViewModel()
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text(LocalizedStringKey("Welcome"))
-            Text(LocalizedStringKey("Home"))
-            TextField("Diary", text: $viewModel.text)
-                .onChange(of: viewModel.text) { oldValue, newValue in
-                    if viewModel.text.last == "."{
-                        if let sentence = viewModel.text.lastSentence(){
-                            viewModel.feeling = viewModel.indoModel?.predictedLabel(for: sentence) ?? "neutral"
+        VStack{
+            VStack {
+                Text(viewModel.currentDateString())
+                    .font(.system(size: 18))
+                HStack{
+                    TextField("Title...", text: $viewModel.title)
+                        .bold()
+                        .foregroundColor(.gray)
+                        .font(.system(size: 48))
+                    Button("Done") {
+                        viewModel.saveNote()
+                    }
+                        .buttonStyle(.bordered)
+                }
+                TextEditor(text: $viewModel.text)
+                    .onChange(of: viewModel.text) { oldValue, newValue in
+                        if viewModel.text.last == "."{
+                            if let sentence = viewModel.text.lastSentence(){
+                                viewModel.feeling = viewModel.indoModel?.predictedLabel(for: sentence) ?? "neutral"
+                            }
                         }
                     }
-                }
-        }
-        .onChange(of: viewModel.feeling){
-            print(viewModel.feeling as Any)
-            withAnimation {
-                viewModel.bgColor = Feelings(label: viewModel.feeling)?.bgColor
+                    .scrollContentBackground(.hidden)
+                    .overlay{
+                        if viewModel.text.isEmpty{
+                            VStack{
+                                HStack{
+                                    Text("Write your journal here...")
+                                        .foregroundColor(.black)
+                                        .opacity(0.35)
+                                    Spacer()
+                                }
+                                Spacer()
+                            }
+                            .padding(8)
+                        }
+                    }
             }
+            .padding()
+            .background(
+                Color.gray
+                .opacity(0.4)
+            )
+            .cornerRadius(30)
         }
-        .background(viewModel.bgColor)
-        .padding()
-        
-        HStack{
-            Text("Happy")
-                .padding()
-                .background(.yellow)
-                .onTapGesture {
-                    viewModel.feeling = "happy"
-                }
-            Text("Angry")
-                .padding()
-                .background(.red)
-                .onTapGesture {
-                    viewModel.feeling = "angry"
-                }
-            Text("Anxious")
-                .padding()
-                .background(.orange)
-                .onTapGesture {
-                    viewModel.feeling = "anxious"
-                }
-        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(30)
+        .background(
+            GradientBackground(feeling: $viewModel.feeling)
+        )
     }
 }
 
