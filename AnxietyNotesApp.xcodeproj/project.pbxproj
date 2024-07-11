@@ -11,6 +11,12 @@
 		5F7C4DE72C3BF43E00182C18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DE62C3BF43E00182C18 /* ContentView.swift */; };
 		5F7C4DE92C3BF43F00182C18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F7C4DE82C3BF43F00182C18 /* Assets.xcassets */; };
 		5F7C4DED2C3BF43F00182C18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F7C4DEC2C3BF43F00182C18 /* Preview Assets.xcassets */; };
+		5F7C4DF42C3BF90400182C18 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF32C3BF90400182C18 /* Localizable.xcstrings */; };
+		5F7C4DF62C3D03B800182C18 /* Feelings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF52C3D03B800182C18 /* Feelings.swift */; };
+		5F7C4DF82C3D16AD00182C18 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF72C3D16AD00182C18 /* Notes.swift */; };
+		5FEE43A62C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43A42C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel */; };
+		5FEE43A72C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43A52C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel */; };
+		5FEE43A92C3FB0B00084CC3A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43A82C3FB0B00084CC3A /* ContentViewModel.swift */; };
 		D9AB17192C3E587400BDF07D /* OpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AB17182C3E587400BDF07D /* OpenAI.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +27,12 @@
 		5F7C4DE82C3BF43F00182C18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F7C4DEA2C3BF43F00182C18 /* AnxietyNotesApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnxietyNotesApp.entitlements; sourceTree = "<group>"; };
 		5F7C4DEC2C3BF43F00182C18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5F7C4DF32C3BF90400182C18 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		5F7C4DF52C3D03B800182C18 /* Feelings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feelings.swift; sourceTree = "<group>"; };
+		5F7C4DF72C3D16AD00182C18 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		5FEE43A42C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentenceEmoEnglish.mlmodel; sourceTree = "<group>"; };
+		5FEE43A52C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentenceEmoIndo.mlmodel; sourceTree = "<group>"; };
+		5FEE43A82C3FB0B00084CC3A /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		D9AB17182C3E587400BDF07D /* OpenAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,12 +66,16 @@
 		5F7C4DE32C3BF43E00182C18 /* AnxietyNotesApp */ = {
 			isa = PBXGroup;
 			children = (
+				5FEE43A02C3FA71D0084CC3A /* MachineLearningModel */,
+				5F7C4DF92C3D17F700182C18 /* Models */,
+				5FEE43AA2C3FB0BA0084CC3A /* ViewModel */,
+				5FEE43AB2C3FB0D20084CC3A /* View */,
 				5F7C4DE42C3BF43E00182C18 /* AnxietyNotesAppApp.swift */,
-				5F7C4DE62C3BF43E00182C18 /* ContentView.swift */,
 				D9AB17182C3E587400BDF07D /* OpenAI.swift */,
 				5F7C4DE82C3BF43F00182C18 /* Assets.xcassets */,
 				5F7C4DEA2C3BF43F00182C18 /* AnxietyNotesApp.entitlements */,
 				5F7C4DEB2C3BF43F00182C18 /* Preview Content */,
+				5F7C4DF32C3BF90400182C18 /* Localizable.xcstrings */,
 			);
 			path = AnxietyNotesApp;
 			sourceTree = "<group>";
@@ -70,6 +86,40 @@
 				5F7C4DEC2C3BF43F00182C18 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5F7C4DF92C3D17F700182C18 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F7C4DF52C3D03B800182C18 /* Feelings.swift */,
+				5F7C4DF72C3D16AD00182C18 /* Notes.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5FEE43A02C3FA71D0084CC3A /* MachineLearningModel */ = {
+			isa = PBXGroup;
+			children = (
+				5FEE43A42C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel */,
+				5FEE43A52C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel */,
+			);
+			path = MachineLearningModel;
+			sourceTree = "<group>";
+		};
+		5FEE43AA2C3FB0BA0084CC3A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5FEE43A82C3FB0B00084CC3A /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5FEE43AB2C3FB0D20084CC3A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F7C4DE62C3BF43E00182C18 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,11 +159,12 @@
 			};
 			buildConfigurationList = 5F7C4DDC2C3BF43E00182C18 /* Build configuration list for PBXProject "AnxietyNotesApp" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = id;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = 5F7C4DD82C3BF43E00182C18;
 			productRefGroup = 5F7C4DE22C3BF43E00182C18 /* Products */;
@@ -132,6 +183,7 @@
 			files = (
 				5F7C4DED2C3BF43F00182C18 /* Preview Assets.xcassets in Resources */,
 				5F7C4DE92C3BF43F00182C18 /* Assets.xcassets in Resources */,
+				5F7C4DF42C3BF90400182C18 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,9 +194,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FEE43A92C3FB0B00084CC3A /* ContentViewModel.swift in Sources */,
 				D9AB17192C3E587400BDF07D /* OpenAI.swift in Sources */,
 				5F7C4DE72C3BF43E00182C18 /* ContentView.swift in Sources */,
 				5F7C4DE52C3BF43E00182C18 /* AnxietyNotesAppApp.swift in Sources */,
+				5FEE43A72C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel in Sources */,
+				5F7C4DF62C3D03B800182C18 /* Feelings.swift in Sources */,
+				5FEE43A62C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel in Sources */,
+				5F7C4DF82C3D16AD00182C18 /* Notes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
