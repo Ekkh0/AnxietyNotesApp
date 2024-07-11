@@ -19,6 +19,7 @@
 		5FEE43A92C3FB0B00084CC3A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43A82C3FB0B00084CC3A /* ContentViewModel.swift */; };
 		D963DCB02C3FCDD500492A41 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963DCAF2C3FCDD500492A41 /* HomeView.swift */; };
 		D963DCB32C3FCE7B00492A41 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963DCB22C3FCE7B00492A41 /* CardView.swift */; };
+		D963DCB52C3FD87000492A41 /* SmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963DCB42C3FD87000492A41 /* SmallCardView.swift */; };
 		D9AB17192C3E587400BDF07D /* OpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AB17182C3E587400BDF07D /* OpenAI.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		5FEE43A82C3FB0B00084CC3A /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		D963DCAF2C3FCDD500492A41 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D963DCB22C3FCE7B00492A41 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D963DCB42C3FD87000492A41 /* SmallCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCardView.swift; sourceTree = "<group>"; };
 		D9AB17182C3E587400BDF07D /* OpenAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				D963DCB22C3FCE7B00492A41 /* CardView.swift */,
+				D963DCB42C3FD87000492A41 /* SmallCardView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				5FEE43A92C3FB0B00084CC3A /* ContentViewModel.swift in Sources */,
 				D9AB17192C3E587400BDF07D /* OpenAI.swift in Sources */,
 				5F7C4DE72C3BF43E00182C18 /* ContentView.swift in Sources */,
+				D963DCB52C3FD87000492A41 /* SmallCardView.swift in Sources */,
 				D963DCB32C3FCE7B00492A41 /* CardView.swift in Sources */,
 				5F7C4DE52C3BF43E00182C18 /* AnxietyNotesAppApp.swift in Sources */,
 				5FEE43A72C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel in Sources */,
