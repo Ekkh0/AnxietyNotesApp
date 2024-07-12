@@ -16,13 +16,13 @@ enum Feelings: String{
         case .neutral:
             return [.white, .white]
         case .happy:
-            return [.yellow, .white]
+            return [.yellow, .orange.opacity(0.5)]
         case .sad:
-            return [.blue, .white]
+            return [.blue, .cyan.opacity(0.5)]
         case .fear:
-            return [.purple, .white]
+            return [.purple, .indigo.opacity(0.5)]
         case .anger:
-            return [.red, .white]
+            return [.red, .pink.opacity(0.5)]
         }
     }
     
