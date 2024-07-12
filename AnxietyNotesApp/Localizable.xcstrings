@@ -1,6 +1,68 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "BLABLABLABLALBALBLA" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ini bla bla bla tapi di indonesia"
+          }
+        }
+      }
+    },
+    "Done" : {
+
+    },
+    "Home" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is home in english"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ini home di indonesia"
+          }
+        }
+      }
+    },
+    "ParagrafDescription" : {
+      "extractionState" : "manual"
+    },
+    "Title..." : {
+
+    },
+    "Welcome" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is welcome in english"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ini welcome di bahasa indonesia"
+          }
+        }
+      }
+    },
+    "Write your journal here..." : {
+
+    }
+  },
+  "version" : "1.0"
+}{
+  "sourceLanguage" : "en",
+  "strings" : {
     "Angry" : {
 
     },

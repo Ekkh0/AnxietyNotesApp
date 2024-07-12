@@ -20,7 +20,15 @@
 		D963DCB02C3FCDD500492A41 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963DCAF2C3FCDD500492A41 /* HomeView.swift */; };
 		D963DCB32C3FCE7B00492A41 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963DCB22C3FCE7B00492A41 /* CardView.swift */; };
 		D963DCB52C3FD87000492A41 /* SmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963DCB42C3FD87000492A41 /* SmallCardView.swift */; };
-		D9AB17192C3E587400BDF07D /* OpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AB17182C3E587400BDF07D /* OpenAI.swift */; };
+		5F7C4DF42C3BF90400182C18 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF32C3BF90400182C18 /* Localizable.xcstrings */; };
+		5F7C4DF62C3D03B800182C18 /* Feelings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF52C3D03B800182C18 /* Feelings.swift */; };
+		5F7C4DF82C3D16AD00182C18 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF72C3D16AD00182C18 /* Notes.swift */; };
+		5FEE43A62C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43A42C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel */; };
+		5FEE43A72C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43A52C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel */; };
+		5FEE43B02C3FBAEB0084CC3A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43AD2C3FBAEB0084CC3A /* ContentViewModel.swift */; };
+		5FEE43B32C3FBB140084CC3A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43B22C3FBB140084CC3A /* String.swift */; };
+		5FEE43B62C3FCA7C0084CC3A /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43B52C3FCA7C0084CC3A /* GradientBackground.swift */; };
+		5FEE43B82C3FDF380084CC3A /* GradientBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43B72C3FDF380084CC3A /* GradientBackgroundViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +47,15 @@
 		D963DCAF2C3FCDD500492A41 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D963DCB22C3FCE7B00492A41 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D963DCB42C3FD87000492A41 /* SmallCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCardView.swift; sourceTree = "<group>"; };
-		D9AB17182C3E587400BDF07D /* OpenAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAI.swift; sourceTree = "<group>"; };
+		5F7C4DF32C3BF90400182C18 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		5F7C4DF52C3D03B800182C18 /* Feelings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feelings.swift; sourceTree = "<group>"; };
+		5F7C4DF72C3D16AD00182C18 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		5FEE43A42C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentenceEmoEnglish.mlmodel; sourceTree = "<group>"; };
+		5FEE43A52C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentenceEmoIndo.mlmodel; sourceTree = "<group>"; };
+		5FEE43AD2C3FBAEB0084CC3A /* ContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		5FEE43B22C3FBB140084CC3A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		5FEE43B52C3FCA7C0084CC3A /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
+		5FEE43B72C3FDF380084CC3A /* GradientBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,12 +88,13 @@
 		5F7C4DE32C3BF43E00182C18 /* AnxietyNotesApp */ = {
 			isa = PBXGroup;
 			children = (
-				5FEE43A02C3FA71D0084CC3A /* MachineLearningModel */,
+				5FEE43AC2C3FBA6C0084CC3A /* Extensions */,
+				5FEE43A02C3FA71D0084CC3A /* MachineLearningModels */,
 				5F7C4DF92C3D17F700182C18 /* Models */,
-				5FEE43AA2C3FB0BA0084CC3A /* ViewModel */,
-				5FEE43AB2C3FB0D20084CC3A /* View */,
+				5FEE43AF2C3FBAEB0084CC3A /* ViewModels */,
+				5FEE43AB2C3FB0D20084CC3A /* Views */,
+				5F7C4DF92C3D17F700182C18 /* Models */,
 				5F7C4DE42C3BF43E00182C18 /* AnxietyNotesAppApp.swift */,
-				D9AB17182C3E587400BDF07D /* OpenAI.swift */,
 				5F7C4DE82C3BF43F00182C18 /* Assets.xcassets */,
 				5F7C4DEA2C3BF43F00182C18 /* AnxietyNotesApp.entitlements */,
 				5F7C4DEB2C3BF43F00182C18 /* Preview Content */,
@@ -103,40 +120,58 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		5FEE43A02C3FA71D0084CC3A /* MachineLearningModel */ = {
+		5FEE43A02C3FA71D0084CC3A /* MachineLearningModels */ = {
 			isa = PBXGroup;
 			children = (
 				5FEE43A42C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel */,
 				5FEE43A52C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel */,
 			);
-			path = MachineLearningModel;
+			path = MachineLearningModels;
 			sourceTree = "<group>";
 		};
-		5FEE43AA2C3FB0BA0084CC3A /* ViewModel */ = {
+		5FEE43AB2C3FB0D20084CC3A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5FEE43A82C3FB0B00084CC3A /* ContentViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		5FEE43AB2C3FB0D20084CC3A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D963DCB12C3FCE3D00492A41 /* Component */,
+				5FEE43B42C3FCA580084CC3A /* Components */,
 				5F7C4DE62C3BF43E00182C18 /* ContentView.swift */,
 				D963DCAF2C3FCDD500492A41 /* HomeView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		D963DCB12C3FCE3D00492A41 /* Component */ = {
+		5FEE43AC2C3FBA6C0084CC3A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5FEE43B22C3FBB140084CC3A /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5FEE43AF2C3FBAEB0084CC3A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5FEE43B92C3FDF3F0084CC3A /* Components */,
+				5FEE43AD2C3FBAEB0084CC3A /* ContentViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5FEE43B42C3FCA580084CC3A /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				D963DCB22C3FCE7B00492A41 /* CardView.swift */,
 				D963DCB42C3FD87000492A41 /* SmallCardView.swift */,
+				5FEE43B52C3FCA7C0084CC3A /* GradientBackground.swift */,
 			);
-			path = Component;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5FEE43B92C3FDF3F0084CC3A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5FEE43B72C3FDF380084CC3A /* GradientBackgroundViewModel.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,15 +248,17 @@
 			files = (
 				D963DCB02C3FCDD500492A41 /* HomeView.swift in Sources */,
 				5FEE43A92C3FB0B00084CC3A /* ContentViewModel.swift in Sources */,
-				D9AB17192C3E587400BDF07D /* OpenAI.swift in Sources */,
+				5FEE43B32C3FBB140084CC3A /* String.swift in Sources */,
 				5F7C4DE72C3BF43E00182C18 /* ContentView.swift in Sources */,
 				D963DCB52C3FD87000492A41 /* SmallCardView.swift in Sources */,
 				D963DCB32C3FCE7B00492A41 /* CardView.swift in Sources */,
 				5F7C4DE52C3BF43E00182C18 /* AnxietyNotesAppApp.swift in Sources */,
+				5FEE43B82C3FDF380084CC3A /* GradientBackgroundViewModel.swift in Sources */,
 				5FEE43A72C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel in Sources */,
 				5F7C4DF62C3D03B800182C18 /* Feelings.swift in Sources */,
 				5FEE43A62C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel in Sources */,
 				5F7C4DF82C3D16AD00182C18 /* Notes.swift in Sources */,
+				5FEE43B62C3FCA7C0084CC3A /* GradientBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
