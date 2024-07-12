@@ -13,7 +13,7 @@ import SwiftUI
 extension ContentView{
     @Observable
     class ViewModel{
-        var feeling: String? = "happy"
+        var feeling: String? = ""
         var text: String = ""
         var title: String = ""
         var notes: [Note] = []
