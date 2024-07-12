@@ -14,10 +14,22 @@ extension ContentView{
     @Observable
     class ViewModel{
         var feeling: String? = "happy"
-        var bgColor: Color? = Color.white
         var text: String = ""
+        var title: String = ""
+        var notes: [Note] = []
         
         let indoModel = try? NLModel(mlModel: SentenceEmoIndo(configuration: MLModelConfiguration()).model)
         let engModel = try? NLModel(mlModel: SentenceEmoEnglish(configuration: MLModelConfiguration()).model)
+        
+        func currentDateString() -> String {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "EEEE, MMM d"
+            return dateFormatter.string(from: Date())
+        }
+        
+        func saveNote(){
+            var note = Note(title: title, content: text, date: Date.now, sumEmotion: indoModel?.predictedLabel(for: text))
+            notes.append(note)
+        }
     }
 }

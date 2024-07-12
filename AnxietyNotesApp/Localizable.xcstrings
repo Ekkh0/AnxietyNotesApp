@@ -1,12 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Angry" : {
-
-    },
-    "Anxious" : {
-
-    },
     "BLABLABLABLALBALBLA" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -18,10 +12,7 @@
         }
       }
     },
-    "Diary" : {
-
-    },
-    "Happy" : {
+    "Done" : {
 
     },
     "Home" : {
@@ -44,6 +35,9 @@
     "ParagrafDescription" : {
       "extractionState" : "manual"
     },
+    "Title..." : {
+
+    },
     "Welcome" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -60,6 +54,9 @@
           }
         }
       }
+    },
+    "Write your journal here..." : {
+
     }
   },
   "version" : "1.0"

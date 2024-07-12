@@ -7,14 +7,18 @@
 
 import Foundation
 
-struct Notes{
-    var title: String
-    var content: String
+struct Note{
+    var title: String?
+    var content: String?
     var date: Date
-    var sumEmotion: String
+    var sumEmotion: String?
+}
+
+struct Notes{
+    var notes: [Note]
 }
 
 var testNote = [
-    Notes(title: "Ini test", content: "blabalblablalbalblablalblablalbalblalbalbalblablalbalbalblablalbalblablalbalblablalbalblalba lbalblablalbalbla blalbalblablalbalblal", date: Date.now, sumEmotion: "Sad"),
-    Notes(title: "Ini test kedua", content: "blabalblablalbalblablalblablalbalblalbalbalblablalbalbalblablalbalblablalbalblablalbalblalba lbalblablalbalbla blalbalblablalbalblal", date: Date.now, sumEmotion: "Sad"),
+    Note(title: "Ini test", content: "blabalblablalbalblablalblablalbalblalbalbalblablalbalbalblablalbalblablalbalblablalbalblalba lbalblablalbalbla blalbalblablalbalblal", date: Date.now, sumEmotion: "Sad"),
+    Note(title: "Ini test kedua", content: "blabalblablalbalblablalblablalbalblalbalbalblablalbalbalblablalbalblablalbalblablalbalblalba lbalblablalbalbla blalbalblablalbalblal", date: Date.now, sumEmotion: "Sad"),
     ]
