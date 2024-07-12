@@ -29,11 +29,11 @@ struct GradientBackground: View{
                     viewModel.changeColor(mood: feeling)
                 }
             Rectangle()
-                .foregroundColor(.white)
-                .frame(width: UIScreen.main.bounds.width-10, height: UIScreen.main.bounds.height-20)
-                .cornerRadius(40)
+                .foregroundColor(Color(UIColor.systemBackground))
+                .frame(width: UIScreen.main.bounds.width-20, height: UIScreen.main.bounds.height-20)
+                .cornerRadius(50)
                 .padding([.bottom], 25)
-                .blur(radius: 10)
+                .blur(radius: 5)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

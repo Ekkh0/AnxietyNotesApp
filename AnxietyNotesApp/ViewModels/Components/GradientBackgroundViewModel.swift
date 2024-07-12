@@ -16,9 +16,11 @@ extension GradientBackground{
         var secondColor: Color? = .gray
         
         func changeColor(mood: String?){
-            var feelingColor = Feelings(label: mood)?.feelingColor
-            firstColor = feelingColor?[0]
-            secondColor = feelingColor?[1]
+            let feelingColor = Feelings(label: mood)?.feelingColor
+            withAnimation(.easeOut(duration: 2)) {            
+                firstColor = feelingColor?[0]
+                secondColor = feelingColor?[1]
+            }
         }
     }
 }
