@@ -18,6 +18,11 @@
 		5FEE43A72C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43A52C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel */; };
 		5FEE43B02C3FBAEB0084CC3A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43AD2C3FBAEB0084CC3A /* ContentViewModel.swift */; };
 		5FEE43B32C3FBB140084CC3A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43B22C3FBB140084CC3A /* String.swift */; };
+		D963DCB82C3FDA3100492A41 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963DCB72C3FDA3100492A41 /* CardView.swift */; };
+		D963DCBA2C3FDA7B00492A41 /* SmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963DCB92C3FDA7B00492A41 /* SmallCardView.swift */; };
+		D963DCBC2C3FDEC400492A41 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963DCBB2C3FDEC400492A41 /* HomeView.swift */; };
+		D963DCBE2C400ACC00492A41 /* AddNoteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963DCBD2C400ACC00492A41 /* AddNoteButtonView.swift */; };
+		D963DCC02C40FC9E00492A41 /* ButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963DCBF2C40FC9E00492A41 /* ButtonViewModel.swift */; };
 		5FEE43B62C3FCA7C0084CC3A /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43B52C3FCA7C0084CC3A /* GradientBackground.swift */; };
 		5FEE43B82C3FDF380084CC3A /* GradientBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43B72C3FDF380084CC3A /* GradientBackgroundViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +41,11 @@
 		5FEE43A52C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentenceEmoIndo.mlmodel; sourceTree = "<group>"; };
 		5FEE43AD2C3FBAEB0084CC3A /* ContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		5FEE43B22C3FBB140084CC3A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		D963DCB72C3FDA3100492A41 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D963DCB92C3FDA7B00492A41 /* SmallCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCardView.swift; sourceTree = "<group>"; };
+		D963DCBB2C3FDEC400492A41 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D963DCBD2C400ACC00492A41 /* AddNoteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteButtonView.swift; sourceTree = "<group>"; };
+		D963DCBF2C40FC9E00492A41 /* ButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModel.swift; sourceTree = "<group>"; };
 		5FEE43B52C3FCA7C0084CC3A /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 		5FEE43B72C3FDF380084CC3A /* GradientBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,8 +123,9 @@
 		5FEE43AB2C3FB0D20084CC3A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5FEE43B42C3FCA580084CC3A /* Components */,
+				D963DCB62C3FDA1900492A41 /* Components */,
 				5F7C4DE62C3BF43E00182C18 /* ContentView.swift */,
+				D963DCBB2C3FDEC400492A41 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,10 +143,17 @@
 			children = (
 				5FEE43B92C3FDF3F0084CC3A /* Components */,
 				5FEE43AD2C3FBAEB0084CC3A /* ContentViewModel.swift */,
+				D963DCBF2C40FC9E00492A41 /* ButtonViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		D963DCB62C3FDA1900492A41 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D963DCB72C3FDA3100492A41 /* CardView.swift */,
+				D963DCB92C3FDA7B00492A41 /* SmallCardView.swift */,
+				D963DCBD2C400ACC00492A41 /* AddNoteButtonView.swift */,
 		5FEE43B42C3FCA580084CC3A /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,9 +242,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D963DCBA2C3FDA7B00492A41 /* SmallCardView.swift in Sources */,
 				5FEE43B02C3FBAEB0084CC3A /* ContentViewModel.swift in Sources */,
+				D963DCB82C3FDA3100492A41 /* CardView.swift in Sources */,
 				5FEE43B32C3FBB140084CC3A /* String.swift in Sources */,
+				D963DCBE2C400ACC00492A41 /* AddNoteButtonView.swift in Sources */,
 				5F7C4DE72C3BF43E00182C18 /* ContentView.swift in Sources */,
+				D963DCBC2C3FDEC400492A41 /* HomeView.swift in Sources */,
+				D963DCC02C40FC9E00492A41 /* ButtonViewModel.swift in Sources */,
 				5F7C4DE52C3BF43E00182C18 /* AnxietyNotesAppApp.swift in Sources */,
 				5FEE43B82C3FDF380084CC3A /* GradientBackgroundViewModel.swift in Sources */,
 				5FEE43A72C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel in Sources */,
@@ -363,7 +386,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = RHGD2V8746;
+				DEVELOPMENT_TEAM = ZSHV98B7GC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -377,10 +400,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Yellow1.AnxietyNotesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -401,7 +424,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = RHGD2V8746;
+				DEVELOPMENT_TEAM = ZSHV98B7GC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -415,10 +438,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Yellow1.AnxietyNotesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

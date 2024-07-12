@@ -1,9 +1,3 @@
-//
-//  ContentView.swift
-//  AnxietyNotesApp
-//
-//  Created by Dharmawan Ruslan on 08/07/24.
-//
 
 import SwiftUI
 import NaturalLanguage
