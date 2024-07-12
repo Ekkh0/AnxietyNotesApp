@@ -1,123 +1,26 @@
 {
-  "sourceLanguage" : "en",
+  "sourceLanguage" : "id",
   "strings" : {
-    "BLABLABLABLALBALBLA" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ini bla bla bla tapi di indonesia"
-          }
-        }
-      }
+    "Bulan, tanggal" : {
+
     },
     "Done" : {
 
     },
-    "Home" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This is home in english"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ini home di indonesia"
-          }
-        }
-      }
+    "Hello, World!" : {
+
     },
-    "ParagrafDescription" : {
-      "extractionState" : "manual"
+    "Judul Note" : {
+
+    },
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." : {
+
     },
     "Title..." : {
 
     },
-    "Welcome" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This is welcome in english"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ini welcome di bahasa indonesia"
-          }
-        }
-      }
-    },
     "Write your journal here..." : {
 
-    }
-  },
-  "version" : "1.0"
-}{
-  "sourceLanguage" : "en",
-  "strings" : {
-    "Angry" : {
-
-    },
-    "Anxious" : {
-
-    },
-    "BLABLABLABLALBALBLA" : {
-      "localizations" : {
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ini bla bla bla tapi di indonesia"
-          }
-        }
-      }
-    },
-    "Happy" : {
-
-    },
-    "Home" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This is home in english"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ini home di indonesia"
-          }
-        }
-      }
-    },
-    "ParagrafDescription" : {
-      "extractionState" : "manual"
-    },
-    "Welcome" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This is welcome in english"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ini welcome di bahasa indonesia"
-          }
-        }
-      }
     }
   },
   "version" : "1.0"

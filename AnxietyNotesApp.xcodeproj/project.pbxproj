@@ -11,24 +11,20 @@
 		5F7C4DE72C3BF43E00182C18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DE62C3BF43E00182C18 /* ContentView.swift */; };
 		5F7C4DE92C3BF43F00182C18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F7C4DE82C3BF43F00182C18 /* Assets.xcassets */; };
 		5F7C4DED2C3BF43F00182C18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F7C4DEC2C3BF43F00182C18 /* Preview Assets.xcassets */; };
-		5F7C4DF42C3BF90400182C18 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF32C3BF90400182C18 /* Localizable.xcstrings */; };
-		5F7C4DF62C3D03B800182C18 /* Feelings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF52C3D03B800182C18 /* Feelings.swift */; };
-		5F7C4DF82C3D16AD00182C18 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF72C3D16AD00182C18 /* Notes.swift */; };
-		5FEE43A62C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43A42C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel */; };
-		5FEE43A72C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43A52C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel */; };
-		5FEE43A92C3FB0B00084CC3A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43A82C3FB0B00084CC3A /* ContentViewModel.swift */; };
-		D963DCB02C3FCDD500492A41 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963DCAF2C3FCDD500492A41 /* HomeView.swift */; };
-		D963DCB32C3FCE7B00492A41 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963DCB22C3FCE7B00492A41 /* CardView.swift */; };
-		D963DCB52C3FD87000492A41 /* SmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963DCB42C3FD87000492A41 /* SmallCardView.swift */; };
-		5F7C4DF42C3BF90400182C18 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF32C3BF90400182C18 /* Localizable.xcstrings */; };
 		5F7C4DF62C3D03B800182C18 /* Feelings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF52C3D03B800182C18 /* Feelings.swift */; };
 		5F7C4DF82C3D16AD00182C18 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF72C3D16AD00182C18 /* Notes.swift */; };
 		5FEE43A62C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43A42C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel */; };
 		5FEE43A72C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43A52C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel */; };
 		5FEE43B02C3FBAEB0084CC3A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43AD2C3FBAEB0084CC3A /* ContentViewModel.swift */; };
 		5FEE43B32C3FBB140084CC3A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43B22C3FBB140084CC3A /* String.swift */; };
-		5FEE43B62C3FCA7C0084CC3A /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43B52C3FCA7C0084CC3A /* GradientBackground.swift */; };
-		5FEE43B82C3FDF380084CC3A /* GradientBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43B72C3FDF380084CC3A /* GradientBackgroundViewModel.swift */; };
+		5FF988812C4128DA00F6F658 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF9887D2C4128DA00F6F658 /* GradientBackground.swift */; };
+		5FF988822C4128DA00F6F658 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF9887E2C4128DA00F6F658 /* CardView.swift */; };
+		5FF988832C4128DA00F6F658 /* AddNoteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF9887F2C4128DA00F6F658 /* AddNoteButtonView.swift */; };
+		5FF988842C4128DA00F6F658 /* SmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF988802C4128DA00F6F658 /* SmallCardView.swift */; };
+		5FF988862C4128E600F6F658 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF988852C4128E600F6F658 /* HomeView.swift */; };
+		5FF988882C4128FE00F6F658 /* ButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF988872C4128FE00F6F658 /* ButtonViewModel.swift */; };
+		5FF9888A2C41290500F6F658 /* GradientBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF988892C41290500F6F658 /* GradientBackgroundViewModel.swift */; };
+		5FF9888C2C41293600F6F658 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5FF9888B2C41293600F6F658 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,24 +34,20 @@
 		5F7C4DE82C3BF43F00182C18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F7C4DEA2C3BF43F00182C18 /* AnxietyNotesApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnxietyNotesApp.entitlements; sourceTree = "<group>"; };
 		5F7C4DEC2C3BF43F00182C18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5F7C4DF32C3BF90400182C18 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		5F7C4DF52C3D03B800182C18 /* Feelings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feelings.swift; sourceTree = "<group>"; };
-		5F7C4DF72C3D16AD00182C18 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
-		5FEE43A42C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentenceEmoEnglish.mlmodel; sourceTree = "<group>"; };
-		5FEE43A52C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentenceEmoIndo.mlmodel; sourceTree = "<group>"; };
-		5FEE43A82C3FB0B00084CC3A /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
-		D963DCAF2C3FCDD500492A41 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		D963DCB22C3FCE7B00492A41 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		D963DCB42C3FD87000492A41 /* SmallCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCardView.swift; sourceTree = "<group>"; };
-		5F7C4DF32C3BF90400182C18 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		5F7C4DF52C3D03B800182C18 /* Feelings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feelings.swift; sourceTree = "<group>"; };
 		5F7C4DF72C3D16AD00182C18 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		5FEE43A42C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentenceEmoEnglish.mlmodel; sourceTree = "<group>"; };
 		5FEE43A52C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentenceEmoIndo.mlmodel; sourceTree = "<group>"; };
 		5FEE43AD2C3FBAEB0084CC3A /* ContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		5FEE43B22C3FBB140084CC3A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		5FEE43B52C3FCA7C0084CC3A /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
-		5FEE43B72C3FDF380084CC3A /* GradientBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundViewModel.swift; sourceTree = "<group>"; };
+		5FF9887D2C4128DA00F6F658 /* GradientBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
+		5FF9887E2C4128DA00F6F658 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		5FF9887F2C4128DA00F6F658 /* AddNoteButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteButtonView.swift; sourceTree = "<group>"; };
+		5FF988802C4128DA00F6F658 /* SmallCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallCardView.swift; sourceTree = "<group>"; };
+		5FF988852C4128E600F6F658 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5FF988872C4128FE00F6F658 /* ButtonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewModel.swift; sourceTree = "<group>"; };
+		5FF988892C41290500F6F658 /* GradientBackgroundViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBackgroundViewModel.swift; sourceTree = "<group>"; };
+		5FF9888B2C41293600F6F658 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = AnxietyNotesApp/Localizable.xcstrings; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,15 +82,14 @@
 			children = (
 				5FEE43AC2C3FBA6C0084CC3A /* Extensions */,
 				5FEE43A02C3FA71D0084CC3A /* MachineLearningModels */,
-				5F7C4DF92C3D17F700182C18 /* Models */,
 				5FEE43AF2C3FBAEB0084CC3A /* ViewModels */,
 				5FEE43AB2C3FB0D20084CC3A /* Views */,
 				5F7C4DF92C3D17F700182C18 /* Models */,
 				5F7C4DE42C3BF43E00182C18 /* AnxietyNotesAppApp.swift */,
 				5F7C4DE82C3BF43F00182C18 /* Assets.xcassets */,
+				5FF9888B2C41293600F6F658 /* Localizable.xcstrings */,
 				5F7C4DEA2C3BF43F00182C18 /* AnxietyNotesApp.entitlements */,
 				5F7C4DEB2C3BF43F00182C18 /* Preview Content */,
-				5F7C4DF32C3BF90400182C18 /* Localizable.xcstrings */,
 			);
 			path = AnxietyNotesApp;
 			sourceTree = "<group>";
@@ -132,9 +123,9 @@
 		5FEE43AB2C3FB0D20084CC3A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5FEE43B42C3FCA580084CC3A /* Components */,
+				5FEE43CB2C4125B00084CC3A /* Components */,
 				5F7C4DE62C3BF43E00182C18 /* ContentView.swift */,
-				D963DCAF2C3FCDD500492A41 /* HomeView.swift */,
+				5FF988852C4128E600F6F658 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,26 +141,28 @@
 		5FEE43AF2C3FBAEB0084CC3A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				5FEE43B92C3FDF3F0084CC3A /* Components */,
+				5FEE43C52C4125A40084CC3A /* Components */,
 				5FEE43AD2C3FBAEB0084CC3A /* ContentViewModel.swift */,
+				5FF988872C4128FE00F6F658 /* ButtonViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		5FEE43B42C3FCA580084CC3A /* Components */ = {
+		5FEE43C52C4125A40084CC3A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D963DCB22C3FCE7B00492A41 /* CardView.swift */,
-				D963DCB42C3FD87000492A41 /* SmallCardView.swift */,
-				5FEE43B52C3FCA7C0084CC3A /* GradientBackground.swift */,
+				5FF988892C41290500F6F658 /* GradientBackgroundViewModel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		5FEE43B92C3FDF3F0084CC3A /* Components */ = {
+		5FEE43CB2C4125B00084CC3A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5FEE43B72C3FDF380084CC3A /* GradientBackgroundViewModel.swift */,
+				5FF9887F2C4128DA00F6F658 /* AddNoteButtonView.swift */,
+				5FF9887E2C4128DA00F6F658 /* CardView.swift */,
+				5FF9887D2C4128DA00F6F658 /* GradientBackground.swift */,
+				5FF988802C4128DA00F6F658 /* SmallCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -235,7 +228,7 @@
 			files = (
 				5F7C4DED2C3BF43F00182C18 /* Preview Assets.xcassets in Resources */,
 				5F7C4DE92C3BF43F00182C18 /* Assets.xcassets in Resources */,
-				5F7C4DF42C3BF90400182C18 /* Localizable.xcstrings in Resources */,
+				5FF9888C2C41293600F6F658 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,19 +239,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D963DCB02C3FCDD500492A41 /* HomeView.swift in Sources */,
-				5FEE43A92C3FB0B00084CC3A /* ContentViewModel.swift in Sources */,
+				5FEE43B02C3FBAEB0084CC3A /* ContentViewModel.swift in Sources */,
 				5FEE43B32C3FBB140084CC3A /* String.swift in Sources */,
+				5FF988862C4128E600F6F658 /* HomeView.swift in Sources */,
 				5F7C4DE72C3BF43E00182C18 /* ContentView.swift in Sources */,
-				D963DCB52C3FD87000492A41 /* SmallCardView.swift in Sources */,
-				D963DCB32C3FCE7B00492A41 /* CardView.swift in Sources */,
 				5F7C4DE52C3BF43E00182C18 /* AnxietyNotesAppApp.swift in Sources */,
-				5FEE43B82C3FDF380084CC3A /* GradientBackgroundViewModel.swift in Sources */,
+				5FF988842C4128DA00F6F658 /* SmallCardView.swift in Sources */,
+				5FF988882C4128FE00F6F658 /* ButtonViewModel.swift in Sources */,
+				5FF988822C4128DA00F6F658 /* CardView.swift in Sources */,
 				5FEE43A72C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel in Sources */,
+				5FF9888A2C41290500F6F658 /* GradientBackgroundViewModel.swift in Sources */,
 				5F7C4DF62C3D03B800182C18 /* Feelings.swift in Sources */,
 				5FEE43A62C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel in Sources */,
+				5FF988832C4128DA00F6F658 /* AddNoteButtonView.swift in Sources */,
 				5F7C4DF82C3D16AD00182C18 /* Notes.swift in Sources */,
-				5FEE43B62C3FCA7C0084CC3A /* GradientBackground.swift in Sources */,
+				5FF988812C4128DA00F6F658 /* GradientBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = ZSHV98B7GC;
+				DEVELOPMENT_TEAM = RHGD2V8746;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -426,7 +421,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = ZSHV98B7GC;
+				DEVELOPMENT_TEAM = RHGD2V8746;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
