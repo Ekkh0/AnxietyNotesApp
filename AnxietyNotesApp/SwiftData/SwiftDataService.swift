@@ -21,9 +21,12 @@ class SwiftDataService{
         self.modelContext = modelContainer.mainContext
     }
     
-    func fetchNotes() -> [Note]{
+    func fetchNotes() -> [Note] {
+        var fetchDescriptor = FetchDescriptor<Note>()
+        fetchDescriptor.sortBy = [SortDescriptor(\Note.date, order: .reverse)]
+        
         do {
-            return try modelContext.fetch(FetchDescriptor<Note>())
+            return try modelContext.fetch(fetchDescriptor)
         } catch {
             fatalError(error.localizedDescription)
         }

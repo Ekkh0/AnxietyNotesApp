@@ -11,12 +11,13 @@ extension HomeView{
     
    @Observable
     class ViewModel{
+        static let shared: ViewModel = ViewModel(dataSource: .shared)
         private let dataSource: SwiftDataService
         var notes: [Note] = []
         var showingPopover = false
         var isDataChanged = false
         
-        init(dataSource: SwiftDataService){
+        private init(dataSource: SwiftDataService){
             self.dataSource = dataSource
             fetchNotes()
             print(notes.count)
