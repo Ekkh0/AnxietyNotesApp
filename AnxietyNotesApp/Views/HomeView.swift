@@ -1,8 +1,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject private var viewModel = ButtonViewModel()
-    @State private var showingPopover = false
+    @State private var viewModel = ViewModel(dataSource: .shared)
     
     init() {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.indigo]
@@ -42,7 +41,7 @@ struct HomeView: View {
                     ToolbarItem(placement: .topBarTrailing)
                     {
                         Button {
-                            showingPopover = true
+                            viewModel.showingPopover = true
                         } label: {
                             HStack(spacing: 3)
                             {
@@ -50,7 +49,7 @@ struct HomeView: View {
                                     .foregroundColor(.indigo)
                             }
                         }
-                        .popover(isPresented: $showingPopover) {
+                        .popover(isPresented: $viewModel.showingPopover) {
                                     Text("Your content here")
                                         .font(.headline)
                                         .padding()
@@ -66,7 +65,7 @@ struct HomeView: View {
                     }
                     ToolbarItem(placement: .bottomBar)
                     {
-                        NavigationLink(destination: ContentView() .navigationBarBackButtonHidden(true)) {
+                        NavigationLink(destination: ContentView(isDataChanged: $viewModel.isDataChanged) .navigationBarBackButtonHidden(true)) {
                             
                                 Image(systemName: "square.and.pencil")
                                     .foregroundColor(.indigo)
@@ -82,7 +81,13 @@ struct HomeView: View {
             }
             
         }
-        
+        .onChange(of: viewModel.isDataChanged) { oldValue, newValue in
+            viewModel.isDataChanged.toggle()
+            viewModel.fetchNotes()
+            for note in viewModel.notes{
+                print(note.title ?? "")
+            }
+        }
     }
     
     

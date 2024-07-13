@@ -8,18 +8,22 @@
 import Foundation
 import CoreML
 import NaturalLanguage
-import SwiftUI
 
 extension ContentView{
     @Observable
     class ViewModel{
+        private let datasource: SwiftDataService
+        
         var feeling: String? = ""
         var text: String = ""
         var title: String = ""
-        var notes: [Note] = []
         
         let indoModel = try? NLModel(mlModel: SentenceEmoIndo(configuration: MLModelConfiguration()).model)
         let engModel = try? NLModel(mlModel: SentenceEmoEnglish(configuration: MLModelConfiguration()).model)
+        
+        init(datasource: SwiftDataService){
+            self.datasource = datasource
+        }
         
         func currentDateString() -> String {
             let dateFormatter = DateFormatter()
@@ -28,8 +32,8 @@ extension ContentView{
         }
         
         func saveNote(){
-            var note = Note(title: title, content: text, date: Date.now, sumEmotion: indoModel?.predictedLabel(for: text))
-            notes.append(note)
+            let note = Note(title: title, content: text, date: Date.now, sumEmotion: indoModel?.predictedLabel(for: text))
+            datasource.saveNotes(note: note)
         }
     }
 }

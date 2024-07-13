@@ -1,10 +1,9 @@
 
 import SwiftUI
-import NaturalLanguage
-import CoreML
 
 struct ContentView: View {
-    @State private var viewModel = ViewModel()
+    @State private var viewModel = ViewModel(datasource: .shared)
+    @Binding var isDataChanged: Bool
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -43,6 +42,8 @@ struct ContentView: View {
                             //SAVE
                             Button("Done") {
                                 viewModel.saveNote()
+                                isDataChanged.toggle()
+                                dismiss()
                             }
                         }
                         .foregroundColor(.indigo)
@@ -162,7 +163,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(isDataChanged: .constant(false))
         .environment(\.locale, .init(identifier: "id"))
 //        .colorScheme(.dark)
 }

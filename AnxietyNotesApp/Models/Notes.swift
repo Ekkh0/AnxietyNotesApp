@@ -6,19 +6,21 @@
 //
 
 import Foundation
+import SwiftData
 
-struct Note{
+@Model
+class Note{
+    var id: UUID = UUID()
     var title: String?
     var content: String?
-    var date: Date
+    var date: Date = Date.now
     var sumEmotion: String?
+    
+    init(title: String? = nil, content: String? = nil, date: Date, sumEmotion: String? = nil) {
+        self.title = title
+        self.content = content
+        self.sumEmotion = sumEmotion
+    }
 }
 
-struct Notes{
-    var notes: [Note]
-}
 
-var testNote = [
-    Note(title: "Ini test", content: "blabalblablalbalblablalblablalbalblalbalbalblablalbalbalblablalbalblablalbalblablalbalblalba lbalblablalbalbla blalbalblablalbalblal", date: Date.now, sumEmotion: "Sad"),
-    Note(title: "Ini test kedua", content: "blabalblablalbalblablalblablalbalblalbalbalblablalbalbalblablalbalblablalbalblablalbalblalba lbalblablalbalbla blalbalblablalbalblal", date: Date.now, sumEmotion: "Sad"),
-    ]
