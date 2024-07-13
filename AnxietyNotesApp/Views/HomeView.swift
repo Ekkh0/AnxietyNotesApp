@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var viewModel = ViewModel(dataSource: .shared)
+    @State private var viewModel = HomeView.ViewModel.shared
     
     init() {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.indigo]
@@ -36,7 +36,6 @@ struct HomeView: View {
                 .padding()
                 .navigationTitle("NoteInMood")
                 .navigationBarTitleDisplayMode(.large)
-                
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing)
                     {
@@ -61,29 +60,20 @@ struct HomeView: View {
 //                                Image(systemName: "line.3.horizontal.decrease.circle.fill")
 //                                    .foregroundColor(.indigo)
 //                        }
-                        
                     }
                     ToolbarItem(placement: .bottomBar)
                     {
-                        NavigationLink(destination: ContentView(isDataChanged: $viewModel.isDataChanged) .navigationBarBackButtonHidden(true)) {
+                        NavigationLink(destination: ContentView() .navigationBarBackButtonHidden(true)) {
                             
                                 Image(systemName: "square.and.pencil")
                                     .foregroundColor(.indigo)
-                        
                         }
-                        
                     }
-                            
                 }
                 .toolbarBackground(.visible, for: .bottomBar)
-                
-                
             }
-            
         }
-        .onChange(of: viewModel.isDataChanged) { oldValue, newValue in
-            viewModel.isDataChanged.toggle()
-            viewModel.fetchNotes()
+        .onChange(of: viewModel.notes) {
             for note in viewModel.notes{
                 print(note.title ?? "")
             }

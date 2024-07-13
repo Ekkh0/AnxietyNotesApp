@@ -3,7 +3,6 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var viewModel = ViewModel(datasource: .shared)
-    @Binding var isDataChanged: Bool
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -42,7 +41,7 @@ struct ContentView: View {
                             //SAVE
                             Button("Done") {
                                 viewModel.saveNote()
-                                isDataChanged.toggle()
+                                HomeView.ViewModel.shared.fetchNotes()
                                 dismiss()
                             }
                         }
@@ -163,7 +162,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(isDataChanged: .constant(false))
+    ContentView()
         .environment(\.locale, .init(identifier: "id"))
 //        .colorScheme(.dark)
 }
