@@ -158,6 +158,7 @@ struct ContentView: View {
 //        .background(
 //            GradientBackground(feeling: $viewModel.feeling)
 //        )
+        .navigationBarBackButtonHidden(true)
     }
 }
 
