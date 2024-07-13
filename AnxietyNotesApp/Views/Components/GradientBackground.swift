@@ -30,10 +30,10 @@ struct GradientBackground: View{
                 }
             Rectangle()
                 .foregroundColor(Color(UIColor.systemBackground))
-                .frame(width: UIScreen.main.bounds.width-20, height: UIScreen.main.bounds.height-20)
+                .frame(width: UIScreen.main.bounds.width-5, height: UIScreen.main.bounds.height-5)
                 .cornerRadius(50)
                 .padding([.bottom], 25)
-                .blur(radius: 5)
+                .blur(radius: 20 )
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

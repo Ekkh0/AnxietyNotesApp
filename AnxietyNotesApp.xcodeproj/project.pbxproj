@@ -239,14 +239,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D963DCBA2C3FDA7B00492A41 /* SmallCardView.swift in Sources */,
 				5FEE43B02C3FBAEB0084CC3A /* ContentViewModel.swift in Sources */,
-				D963DCB82C3FDA3100492A41 /* CardView.swift in Sources */,
 				5FEE43B32C3FBB140084CC3A /* String.swift in Sources */,
 				5FF988862C4128E600F6F658 /* HomeView.swift in Sources */,
 				5F7C4DE72C3BF43E00182C18 /* ContentView.swift in Sources */,
-				D963DCBC2C3FDEC400492A41 /* HomeView.swift in Sources */,
-				D963DCC02C40FC9E00492A41 /* ButtonViewModel.swift in Sources */,
 				5F7C4DE52C3BF43E00182C18 /* AnxietyNotesAppApp.swift in Sources */,
 				5FF988842C4128DA00F6F658 /* SmallCardView.swift in Sources */,
 				5FF988882C4128FE00F6F658 /* ButtonViewModel.swift in Sources */,
@@ -387,7 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = ZSHV98B7GC;
+				DEVELOPMENT_TEAM = 4JX4J7L4P7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -425,7 +421,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = ZSHV98B7GC;
+				DEVELOPMENT_TEAM = 4JX4J7L4P7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

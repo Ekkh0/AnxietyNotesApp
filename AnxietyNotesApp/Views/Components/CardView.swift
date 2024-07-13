@@ -27,7 +27,7 @@ struct CardView: View {
                 
                 ZStack(alignment: .topLeading) {
                     Color.lightGray
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
                         .frame(width: 330, height: 130)
                     
                     Text("Note your mood here :)")

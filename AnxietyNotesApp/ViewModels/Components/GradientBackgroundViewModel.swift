@@ -13,7 +13,7 @@ extension GradientBackground{
     class ViewModel{
         var angle: Double = 0
         var firstColor: Color? = .white
-        var secondColor: Color? = .gray
+        var secondColor: Color? = .white
         
         func changeColor(mood: String?){
             let feelingColor = Feelings(label: mood)?.feelingColor
