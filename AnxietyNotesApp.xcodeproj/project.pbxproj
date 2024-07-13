@@ -25,6 +25,8 @@
 		5FF988882C4128FE00F6F658 /* ButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF988872C4128FE00F6F658 /* ButtonViewModel.swift */; };
 		5FF9888A2C41290500F6F658 /* GradientBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF988892C41290500F6F658 /* GradientBackgroundViewModel.swift */; };
 		5FF9888C2C41293600F6F658 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5FF9888B2C41293600F6F658 /* Localizable.xcstrings */; };
+		BF8E06BD2C4234C800DF5234 /* SwiftDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8E06BC2C4234C800DF5234 /* SwiftDataService.swift */; };
+		BF8E06BF2C4236C300DF5234 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8E06BE2C4236C300DF5234 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		5FF988872C4128FE00F6F658 /* ButtonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewModel.swift; sourceTree = "<group>"; };
 		5FF988892C41290500F6F658 /* GradientBackgroundViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBackgroundViewModel.swift; sourceTree = "<group>"; };
 		5FF9888B2C41293600F6F658 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = AnxietyNotesApp/Localizable.xcstrings; sourceTree = SOURCE_ROOT; };
+		BF8E06BC2C4234C800DF5234 /* SwiftDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataService.swift; sourceTree = "<group>"; };
+		BF8E06BE2C4236C300DF5234 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 		5F7C4DE32C3BF43E00182C18 /* AnxietyNotesApp */ = {
 			isa = PBXGroup;
 			children = (
+				BF8E06BB2C4234C800DF5234 /* SwiftData */,
 				5FEE43AC2C3FBA6C0084CC3A /* Extensions */,
 				5FEE43A02C3FA71D0084CC3A /* MachineLearningModels */,
 				5FEE43AF2C3FBAEB0084CC3A /* ViewModels */,
@@ -144,6 +149,7 @@
 				5FEE43C52C4125A40084CC3A /* Components */,
 				5FEE43AD2C3FBAEB0084CC3A /* ContentViewModel.swift */,
 				5FF988872C4128FE00F6F658 /* ButtonViewModel.swift */,
+				BF8E06BE2C4236C300DF5234 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -165,6 +171,14 @@
 				5FF988802C4128DA00F6F658 /* SmallCardView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		BF8E06BB2C4234C800DF5234 /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				BF8E06BC2C4234C800DF5234 /* SwiftDataService.swift */,
+			);
+			path = SwiftData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF8E06BF2C4236C300DF5234 /* HomeViewModel.swift in Sources */,
 				5FEE43B02C3FBAEB0084CC3A /* ContentViewModel.swift in Sources */,
 				5FEE43B32C3FBB140084CC3A /* String.swift in Sources */,
 				5FF988862C4128E600F6F658 /* HomeView.swift in Sources */,
@@ -248,6 +263,7 @@
 				5FF988882C4128FE00F6F658 /* ButtonViewModel.swift in Sources */,
 				5FF988822C4128DA00F6F658 /* CardView.swift in Sources */,
 				5FEE43A72C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel in Sources */,
+				BF8E06BD2C4234C800DF5234 /* SwiftDataService.swift in Sources */,
 				5FF9888A2C41290500F6F658 /* GradientBackgroundViewModel.swift in Sources */,
 				5F7C4DF62C3D03B800182C18 /* Feelings.swift in Sources */,
 				5FEE43A62C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel in Sources */,
@@ -383,7 +399,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 4JX4J7L4P7;
+				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -397,7 +413,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -421,7 +437,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 4JX4J7L4P7;
+				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -435,7 +451,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
