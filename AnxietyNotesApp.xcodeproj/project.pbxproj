@@ -34,6 +34,9 @@
 		BF8E06DD2C427E2600DF5234 /* NewNoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8E06DC2C427E2600DF5234 /* NewNoteWidget.swift */; };
 		BF8E06DF2C427E2800DF5234 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF8E06DE2C427E2800DF5234 /* Assets.xcassets */; };
 		BF8E06E32C427E2800DF5234 /* NewNoteWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BF8E06D32C427E2600DF5234 /* NewNoteWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D94930CD2C43E66D005C203A /* SwiftDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8E06BC2C4234C800DF5234 /* SwiftDataService.swift */; };
+		D94930CE2C43E676005C203A /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF72C3D16AD00182C18 /* Notes.swift */; };
+		D94930CF2C43E679005C203A /* Feelings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF52C3D03B800182C18 /* Feelings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -391,8 +394,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94930CD2C43E66D005C203A /* SwiftDataService.swift in Sources */,
 				BF8E06DD2C427E2600DF5234 /* NewNoteWidget.swift in Sources */,
 				BF8E06DB2C427E2600DF5234 /* NewNoteWidgetBundle.swift in Sources */,
+				D94930CE2C43E676005C203A /* Notes.swift in Sources */,
+				D94930CF2C43E679005C203A /* Feelings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
