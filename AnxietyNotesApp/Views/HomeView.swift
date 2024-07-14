@@ -28,7 +28,6 @@ struct HomeView: View {
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
                         }
-                        
                     }
                     .frame(maxHeight: .infinity, alignment: .center)
                     .padding(.bottom, 16)
