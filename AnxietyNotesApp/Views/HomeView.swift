@@ -13,6 +13,7 @@ struct HomeView: View {
             ZStack{
                 Color.bg
                     .ignoresSafeArea()
+
                 VStack {
                     VStack{
                         Image(.notebookBro1) // test branch ages
@@ -28,15 +29,16 @@ struct HomeView: View {
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
                         }
-                        
                     }
                     .frame(maxHeight: .infinity, alignment: .center)
                     .padding(.bottom, 16)
+                    
                     
                 }
                 .padding()
                 .navigationTitle("NoteInMood")
                 .navigationBarTitleDisplayMode(.large)
+                .navigationBarBackButtonHidden()
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing)
                     {
@@ -72,6 +74,14 @@ struct HomeView: View {
                     }
                 }
                 .toolbarBackground(.visible, for: .bottomBar)
+                
+                ScrollView {
+                     ForEach(viewModel.notes, id: \.self) { note in
+                         SmallCardView(note: note)
+                     }
+                }//.padding(.top, 10)
+                
+                
             }
             .onChange(of: viewModel.notes) {
                 for note in viewModel.notes{

@@ -27,16 +27,16 @@ enum Feelings: String{
     }
     
     init?(label: String?) {
-        switch label?.lowercased() {
-        case "neutral":
+        switch label {
+        case "Neutral":
             self = .neutral
-        case "joy":
+        case "Joy":
             self = .happy
-        case "sad", "sadness":
+        case "Sad", "Sadness":
             self = .sad
-        case "fear":
+        case "Fear":
             self = .fear
-        case "anger":
+        case "Anger":
             self = .anger
         default:
             return nil

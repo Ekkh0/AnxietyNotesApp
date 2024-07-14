@@ -37,6 +37,7 @@
 		D94930CD2C43E66D005C203A /* SwiftDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8E06BC2C4234C800DF5234 /* SwiftDataService.swift */; };
 		D94930CE2C43E676005C203A /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF72C3D16AD00182C18 /* Notes.swift */; };
 		D94930CF2C43E679005C203A /* Feelings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF52C3D03B800182C18 /* Feelings.swift */; };
+		D94930D32C44EB14005C203A /* SaveNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94930D22C44EB14005C203A /* SaveNoteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		BF8E06DC2C427E2600DF5234 /* NewNoteWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteWidget.swift; sourceTree = "<group>"; };
 		BF8E06DE2C427E2800DF5234 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF8E06E02C427E2800DF5234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D94930D22C44EB14005C203A /* SaveNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				5FEE43CB2C4125B00084CC3A /* Components */,
 				5F7C4DE62C3BF43E00182C18 /* ContentView.swift */,
 				5FF988852C4128E600F6F658 /* HomeView.swift */,
+				D94930D22C44EB14005C203A /* SaveNoteView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				5FF988862C4128E600F6F658 /* HomeView.swift in Sources */,
 				BF8E06CD2C427D6700DF5234 /* Router.swift in Sources */,
 				5F7C4DE72C3BF43E00182C18 /* ContentView.swift in Sources */,
+				D94930D32C44EB14005C203A /* SaveNoteView.swift in Sources */,
 				5F7C4DE52C3BF43E00182C18 /* AnxietyNotesAppApp.swift in Sources */,
 				5FF988842C4128DA00F6F658 /* SmallCardView.swift in Sources */,
 				5FF988882C4128FE00F6F658 /* ButtonViewModel.swift in Sources */,
@@ -537,7 +541,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
+				DEVELOPMENT_TEAM = ZSHV98B7GC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -577,7 +581,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
+				DEVELOPMENT_TEAM = ZSHV98B7GC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -614,7 +618,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
+				DEVELOPMENT_TEAM = ZSHV98B7GC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewNoteWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NewNoteWidget;
@@ -643,7 +647,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
+				DEVELOPMENT_TEAM = ZSHV98B7GC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewNoteWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NewNoteWidget;

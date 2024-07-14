@@ -4,6 +4,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var viewModel = ViewModel(datasource: .shared)
     @Environment(\.dismiss) var dismiss
+    @State private var navigateToSaveNote = false
     
     var body: some View {
         ZStack{
@@ -42,9 +43,11 @@ struct ContentView: View {
                             Button("Done") {
                                 viewModel.saveNote()
                                 HomeView.ViewModel.shared.fetchNotes()
-                                dismiss()
+                                //dismiss()
+                                navigateToSaveNote = true
                             }
                         }
+
                         .foregroundColor(.indigo)
 //                        .frame(width: 360)
 //                        .background(.red)
@@ -101,7 +104,13 @@ struct ContentView: View {
         )
         .ignoresSafeArea(.keyboard)
         
-        
+        NavigationLink(
+            destination: SaveNoteView(),
+            isActive: $navigateToSaveNote,
+            label: {
+                EmptyView()
+            })
+            
         
         
 //        VStack {

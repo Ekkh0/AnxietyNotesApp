@@ -10,14 +10,15 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), sumEmotion: "joy")
+        SimpleEntry(date: Date(), sumEmotion: "")
     }
     
     @MainActor
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let notes = SwiftDataService.shared.fetchNotes()
+        
         let latestNote = notes.first
-        let sumEmotion = latestNote?.sumEmotion ?? "neutral"
+        let sumEmotion = latestNote?.sumEmotion ?? ""
         
         let entry = SimpleEntry(date: Date(), sumEmotion: sumEmotion)
         completion(entry)
@@ -28,17 +29,12 @@ struct Provider: TimelineProvider {
         var entries: [SimpleEntry] = []
         
         let notes = SwiftDataService.shared.fetchNotes()
-        let latestNote = notes.first
-        let sumEmotion = latestNote?.sumEmotion ?? "neutral"
         
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
+        let latestNote = notes.last
+        print("Notes in timeline: \(latestNote?.sumEmotion ?? "no")")
+        let sumEmotion = latestNote?.sumEmotion ?? ""
         let currentDate = Date()
-//        for hourOffset in 0 ..< 5 {
-//            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-//            let entry = SimpleEntry(date: entryDate, notes: notes)
-//            
-//            entries.append(entry)
-//        }
+
         let entry = SimpleEntry(date: currentDate, sumEmotion: sumEmotion)
         entries.append(entry)
         
@@ -53,6 +49,8 @@ struct SimpleEntry: TimelineEntry {
 }
 
 struct NewNoteWidgetEntryView : View {
+    @Environment(\.widgetFamily) var widgetFamily
+    
     var entry: Provider.Entry
     
     var body: some View {
@@ -68,74 +66,89 @@ struct NewNoteWidgetEntryView : View {
         let colors = feeling?.feelingColor ?? [.clear, .clear]
         
         
-        VStack (alignment: .leading){
-            Circle()
-                .fill(
-                    LinearGradient(
-                    stops: [
-                        Gradient.Stop(color: colors[0], location: 0.00),
-                        Gradient.Stop(color: colors[1], location: 1.00),
-                    ],
-                    
-                    startPoint: UnitPoint(x: 0.16, y: 0),
-                    endPoint: UnitPoint(x: 0.86, y: 1)
-                    )
-                )
-                .overlay(
-                    Circle()
-                        .stroke(entry.sumEmotion.isEmpty ? Color.dash : Color.clear, style: StrokeStyle(lineWidth: 1, dash: [5]))
-                        .frame(width: 100, height: 90)
-                        
-                )
-                .frame(width: 100, height: 90)
-                .offset(x: -10)
-                .shadow(color: .black.opacity(0.1), radius: 10, x: 3, y: 5)
+        
             
-            
-            Text(isEmotionNil ? "You haven't started today" : "Your today's mood is") //title
-                .font(.system(size: 7.5))
-                .padding(.top, 2)
-                .padding(.bottom, -10)
-                .foregroundColor(.bgEditIcon)
-
-            
-            HStack {
-                Text(isEmotionNil ? "Write now!" : entry.sumEmotion) //sumEmotion
-                    .font(.system(size: 18))
-                    .padding(.top, 3)
-                    .fontWeight(.bold)
-                    .foregroundColor(.bgEditIcon)
-                
-                Spacer()
-                Button(action: {
-                    
-                }, label: {
-                    Image(systemName: "square.and.pencil")
-                        .resizable()
-                        .offset(x: 0.5)
-                        .frame(width: 10, height: 10, alignment: .center)
-                        
-       
-                })
-                .foregroundColor(.editIcon)
-                .background(.bgEditIcon)
-                .accentColor(.bgEditIcon)
-                .frame(width: 18, height: 18)
-                .clipShape(Circle())
-                .offset(y: 2)
-                
+        switch widgetFamily{
+        case .accessoryCircular:
+            Link(destination: URL(string: "noteinmood://newNote")!){
+                Image(systemName: "square.and.pencil")
+                //Text("emotion: \(entry.sumEmotion)")
             }
-            .padding(.bottom, 20)
             
+        case .systemSmall:
+            VStack (alignment: .leading){
+                Circle()
+                    .fill(
+                        LinearGradient(
+                        stops: [
+                            Gradient.Stop(color: colors[0], location: 0.00),
+                            Gradient.Stop(color: colors[1], location: 1.00),
+                        ],
+                        
+                        startPoint: UnitPoint(x: 0.16, y: 0),
+                        endPoint: UnitPoint(x: 0.86, y: 1)
+                        )
+                    )
+                    .overlay(
+                        Circle()
+                            .stroke(entry.sumEmotion.isEmpty ? Color.dash : Color.clear, style: StrokeStyle(lineWidth: 1, dash: [5]))
+                            .frame(width: 100, height: 90)
+                            
+                    )
+                    .frame(width: 100, height: 90)
+                    .offset(x: -10)
+                    .shadow(color: .black.opacity(0.1), radius: 10, x: 3, y: 5)
                 
                 
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding(.top, 20)
-            
+                Text(isEmotionNil ? "You haven't started today" : "Your today's mood is")
+                    .font(.system(size: 7.5))
+                    .padding(.top, 2)
+                    .padding(.bottom, -10)
+                    .foregroundColor(.bgEditIcon)
 
+                
+                HStack {
+                    Text(isEmotionNil ? "Write now!" : entry.sumEmotion)
+                        .font(.system(size: 18))
+                        .padding(.top, 3)
+                        .fontWeight(.bold)
+                        .foregroundColor(.bgEditIcon)
+                    
+                    Spacer()
+                    Button(action: {
+                        
+                    }, label: {
+                        Image(systemName: "square.and.pencil")
+                            .resizable()
+                            .offset(x: 0.5)
+                            .frame(width: 10, height: 10, alignment: .center)
+                            
+           
+                    })
+                    .foregroundColor(.editIcon)
+                    .background(.bgEditIcon)
+                    .accentColor(.bgEditIcon)
+                    .frame(width: 18, height: 18)
+                    .clipShape(Circle())
+                    .offset(y: 2)
+                    
+                }
+                .padding(.bottom, 20)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(.top, 20)
+            
+        case .systemMedium:
+            Text("Medium")
+            
+        default:
+            Text("Default")
+        }
         
     }
+    
+
+    
 }
 
 struct NewNoteWidget: Widget {
@@ -147,26 +160,29 @@ struct NewNoteWidget: Widget {
                 NewNoteWidgetEntryView(entry: entry)
                     .containerBackground(.fill.tertiary, for: .widget)
                     
+                
+                    
             } else {
                 NewNoteWidgetEntryView(entry: entry)
                     .padding()
                     .background()
-                    
             }
+            
         }
         .configurationDisplayName("Quick New Notes")
         .description("This is a widget to add new notes quickly.")
-        .supportedFamilies([.accessoryCircular, .systemSmall])
+        .supportedFamilies([.accessoryCircular, .systemSmall, .systemMedium])
+        
     }
 }
 
-#Preview(as: .systemSmall) {
+#Preview(as: .accessoryCircular) {
     NewNoteWidget()
 } timeline: {
-    SimpleEntry(date: .now, sumEmotion: "neutral")
-    SimpleEntry(date: .now, sumEmotion: "joy")
-    SimpleEntry(date: .now, sumEmotion: "sad")
-    SimpleEntry(date: .now, sumEmotion: "fear")
-    SimpleEntry(date: .now, sumEmotion: "anger")
+    SimpleEntry(date: .now, sumEmotion: "Neutral")
+    SimpleEntry(date: .now, sumEmotion: "Joy")
+    SimpleEntry(date: .now, sumEmotion: "Sad")
+    SimpleEntry(date: .now, sumEmotion: "Fear")
+    SimpleEntry(date: .now, sumEmotion: "Anger")
     SimpleEntry(date: .now, sumEmotion: "")
 }

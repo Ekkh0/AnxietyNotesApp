@@ -4,6 +4,9 @@
     "Back" : {
 
     },
+    "Default" : {
+
+    },
     "Done" : {
 
     },
@@ -13,13 +16,25 @@
     "Lorem Ipsum" : {
 
     },
+    "Medium" : {
+
+    },
     "Note your mood here :)" : {
 
     },
     "NoteInMood" : {
 
     },
+    "Quick New Notes" : {
+
+    },
+    "Save Note" : {
+
+    },
     "Start Writing" : {
+
+    },
+    "This is a widget to add new notes quickly." : {
 
     },
     "Title..." : {
@@ -28,7 +43,13 @@
     "Write your journal here..." : {
 
     },
+    "You haven't started today" : {
+
+    },
     "Your content here" : {
+
+    },
+    "Your today's mood is" : {
 
     }
   },
