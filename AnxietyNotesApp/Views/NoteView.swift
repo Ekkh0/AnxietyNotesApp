@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct NoteView: View {
     @State private var viewModel = ViewModel(datasource: .shared)
     @Environment(\.dismiss) var dismiss
     
@@ -163,7 +163,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    NoteView()
         .environment(\.locale, .init(identifier: "id"))
 //        .colorScheme(.dark)
 }

@@ -63,7 +63,7 @@ struct HomeView: View {
                     }
                     ToolbarItem(placement: .bottomBar)
                     {
-                        NavigationLink(destination: ContentView() .navigationBarBackButtonHidden(true)) {
+                        NavigationLink(destination: NoteView() .navigationBarBackButtonHidden(true)) {
                             
                             Image(systemName: "square.and.pencil")
                                 .foregroundColor(.indigo)
@@ -86,4 +86,5 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+//        .colorScheme(.dark)
 }

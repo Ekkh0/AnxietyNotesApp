@@ -8,8 +8,9 @@
 import Foundation
 import CoreML
 import NaturalLanguage
+import WidgetKit
 
-extension ContentView{
+extension NoteView{
     @Observable
     class ViewModel{
         private let datasource: SwiftDataService
@@ -34,6 +35,7 @@ extension ContentView{
         func saveNote(){
             let note = Note(title: title, content: text, date: Date.now, sumEmotion: indoModel?.predictedLabel(for: text))
             datasource.saveNotes(note: note)
+            WidgetCenter.shared.reloadTimelines(ofKind: "NewNoteWidget")
         }
     }
 }

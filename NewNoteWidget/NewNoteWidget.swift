@@ -10,7 +10,7 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), sumEmotion: "joy")
+        SimpleEntry(date: Date.now, sumEmotion: "joy")
     }
     
     @MainActor
@@ -19,7 +19,7 @@ struct Provider: TimelineProvider {
         let latestNote = notes.first
         let sumEmotion = latestNote?.sumEmotion ?? "neutral"
         
-        let entry = SimpleEntry(date: Date(), sumEmotion: sumEmotion)
+        let entry = SimpleEntry(date: Date.now, sumEmotion: sumEmotion)
         completion(entry)
     }
     
@@ -32,7 +32,7 @@ struct Provider: TimelineProvider {
         let sumEmotion = latestNote?.sumEmotion ?? "neutral"
         
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
+        let currentDate = Date.now
 //        for hourOffset in 0 ..< 5 {
 //            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
 //            let entry = SimpleEntry(date: entryDate, notes: notes)
