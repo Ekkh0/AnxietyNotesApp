@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "id",
   "strings" : {
+    "" : {
+
+    },
     "Back" : {
 
     },
@@ -29,9 +32,6 @@
 
     },
     "Write your journal here..." : {
-
-    },
-    "Your content here" : {
 
     }
   },
