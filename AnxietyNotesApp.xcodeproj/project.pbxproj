@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F0954722C468B690066B91B /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5FF9888B2C41293600F6F658 /* Localizable.xcstrings */; };
 		5F7C4DE52C3BF43E00182C18 /* AnxietyNotesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DE42C3BF43E00182C18 /* AnxietyNotesAppApp.swift */; };
 		5F7C4DE72C3BF43E00182C18 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DE62C3BF43E00182C18 /* NoteView.swift */; };
 		5F7C4DE92C3BF43F00182C18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F7C4DE82C3BF43F00182C18 /* Assets.xcassets */; };
@@ -380,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F0954722C468B690066B91B /* Localizable.xcstrings in Resources */,
 				BF8E06DF2C427E2800DF5234 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,7 +565,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 4JX4J7L4P7;
+				DEVELOPMENT_TEAM = RHGD2V8746;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -603,7 +605,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 4JX4J7L4P7;
+				DEVELOPMENT_TEAM = RHGD2V8746;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -641,7 +643,7 @@
 				CODE_SIGN_ENTITLEMENTS = NewNoteWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4JX4J7L4P7;
+				DEVELOPMENT_TEAM = RHGD2V8746;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewNoteWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NewNoteWidget;
@@ -671,7 +673,7 @@
 				CODE_SIGN_ENTITLEMENTS = NewNoteWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4JX4J7L4P7;
+				DEVELOPMENT_TEAM = RHGD2V8746;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewNoteWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NewNoteWidget;

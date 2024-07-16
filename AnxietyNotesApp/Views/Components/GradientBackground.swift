@@ -25,6 +25,9 @@ struct GradientBackground: View{
                 }
                 .edgesIgnoringSafeArea(.all)
                 .frame(width: 1400, height: 1400)
+                .onAppear(){
+                    viewModel.changeColor(mood: feeling)
+                }
                 .onChange(of: feeling) { oldValue, newValue in
                     viewModel.changeColor(mood: feeling)
                 }

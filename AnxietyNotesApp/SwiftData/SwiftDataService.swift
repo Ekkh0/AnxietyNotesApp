@@ -88,4 +88,8 @@ class SwiftDataService{
             fatalError("Failed to fetch note by id: \(error.localizedDescription)")
         }
     }
+    
+    func deleteNote(note: Note) {
+        modelContext.delete(note)
+    }
 }

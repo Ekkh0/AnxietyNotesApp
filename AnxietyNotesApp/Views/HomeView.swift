@@ -1,4 +1,5 @@
 import SwiftUI
+import WidgetKit
 
 struct HomeView: View {
     @State private var viewModel = HomeView.ViewModel.shared
@@ -13,27 +14,26 @@ struct HomeView: View {
     
     var body: some View {
             ZStack{
-                Color.bg
-                    .ignoresSafeArea()
-
                 VStack {
-                    VStack{
-                        Image(.notebookBro1)
-                            .resizable()
-                            .frame(width: 198, height: 198)
-                        VStack {
-                            Text("Express your feeling")
-                                .font(.title3)
-                                .fontWeight(.bold)
-                                .padding(.bottom, 4)
-                            Text("Start writing to help you calm and relieve your anxiety")
-                                .multilineTextAlignment(.center)
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
+                    if viewModel.notes.isEmpty{
+                        VStack{
+                            Image(.notebookBro1)
+                                .resizable()
+                                .frame(width: 198, height: 198)
+                            VStack {
+                                Text("Express your feeling")
+                                    .font(.title3)
+                                    .fontWeight(.bold)
+                                    .padding(.bottom, 4)
+                                Text("Start writing to help you calm and relieve your anxiety")
+                                    .multilineTextAlignment(.center)
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                            }
                         }
+                        .frame(maxHeight: .infinity, alignment: .center)
+                        .padding(.bottom, 16)
                     }
-                    .frame(maxHeight: .infinity, alignment: .center)
-                    .padding(.bottom, 16)
                     
                     
                 }
@@ -77,20 +77,30 @@ struct HomeView: View {
                 }
                 .toolbarBackground(.visible, for: .bottomBar)
                 
-                ScrollView {
-                    if selectedColor == "Latest" {
-                        ForEach(viewModel.notes, id: \.self) { note in
+//                ScrollView {
+                    List{
+                        ForEach(selectedColor == "Latest" ? viewModel.notes : viewModel.notes.reversed(), id: \.self) { note in
                             SmallCardView(note: note)
+                                .overlay{
+                                    NavigationLink(destination: NoteView(note: note)) {
+                                        EmptyView()
+                                    }
+                                    .navigationBarBackButtonHidden(true)
+                                    .opacity(0)
+                                }
+                                .swipeActions{
+                                    Button(role: .destructive) {
+                                        viewModel.deleteNote(note: note)
+                                        viewModel.fetchNotes()
+                                        WidgetCenter.shared.reloadTimelines(ofKind: "NewNoteWidget")
+                                    } label: {
+                                        Image(systemName: "trash")
+                                    }
+                                }
                         }
                     }
-                    else{
-                        ForEach(viewModel.notes.reversed(), id: \.self) { note in
-                            SmallCardView(note: note)
-                        }
-                    }
-                }
-                
-                
+                    .listStyle(.plain)
+//                }
             }
             .onChange(of: viewModel.notes) {
                 for note in viewModel.notes{

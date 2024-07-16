@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension HomeView{
     
@@ -26,5 +27,14 @@ extension HomeView{
             notes = dataSource.fetchNotes()
         }
         
+        func getMonth(date: Date) -> String {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMM"
+            return dateFormatter.string(from: date)
+        }
+        
+        func deleteNote(note: Note){
+            dataSource.deleteNote(note: note)
+        }
     }
 }

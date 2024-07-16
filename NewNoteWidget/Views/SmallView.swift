@@ -20,8 +20,8 @@ struct SmallView: View {
             }
         }()
         let isEmotionNil: Bool = {
-            if let note = note{
-                return note.sumEmotion != nil
+            if note != nil{
+                return false
             }else{
                 return true
             }

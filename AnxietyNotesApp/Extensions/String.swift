@@ -15,4 +15,12 @@ extension String {
         // Get the last non-empty sentence
         return sentences.last?.trimmingCharacters(in: .whitespacesAndNewlines)
     }
+    
+    func firstSentence() -> String? {
+        // Split the string by dots and newlines
+        let sentences = self.components(separatedBy: [".", "\n"]).filter { !$0.isEmpty }
+        
+        // Get the last non-empty sentence
+        return sentences.first?.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
 }

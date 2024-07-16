@@ -12,9 +12,11 @@ struct SaveNoteView: View {
     
     var body: some View {
         ZStack{
-            VStack{
-                Image("SaveNoteImage")
-            }
+            Image("SaveNoteImage")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height)
+
             VStack {
                 Spacer()
                 Button(action: {
@@ -41,10 +43,14 @@ struct SaveNoteView: View {
                 label: {
                     EmptyView()
                 })
-        }.ignoresSafeArea(.all)
+                
+        }
+        .ignoresSafeArea(.all)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 #Preview {
     SaveNoteView()
+        .colorScheme(.dark)
 }

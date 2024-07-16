@@ -16,13 +16,21 @@ extension NoteView{
         private let datasource: SwiftDataService
         
         var note: Note?
-        var feeling: String? = ""
+        var feeling: String? = "Neutral"
         var text: String = ""
         var title: String = ""
         var navigateToSaveNote = false
         
-        let indoModel = try? NLModel(mlModel: SentenceEmoIndo(configuration: MLModelConfiguration()).model)
-        let engModel = try? NLModel(mlModel: SentenceEmoEnglish(configuration: MLModelConfiguration()).model)
+        var emoModel : NLModel?{
+            let language = UserDefaults.standard.object(forKey: "AppleLanguages") as? [String]
+            if let language = language, language.first == "id"{
+                print("model dalam bahasa indonesia")
+                return try? NLModel(mlModel: SentenceEmoEnglish(configuration: MLModelConfiguration()).model)
+            }else{
+                print("model dalam bahasa inggris")
+                return try? NLModel(mlModel: SentenceEmoIndo(configuration: MLModelConfiguration()).model)
+            }
+        }
         
         init(datasource: SwiftDataService, note: Note?){
             self.datasource = datasource
@@ -44,11 +52,15 @@ extension NoteView{
             if let note = note{
                 note.title = title
                 note.content = text
-                note.sumEmotion = indoModel?.predictedLabel(for: text)
+                note.sumEmotion = emoModel?.predictedLabel(for: text)
                 note.date = Date.now
                 datasource.saveContext()
             }else{
-                let newNote = Note(title: title, content: text, date: Date.now, sumEmotion: indoModel?.predictedLabel(for: text))
+                text.last != "." ? text.append(".") : nil
+                if title.isEmpty{
+                    title = text.firstSentence()!
+                }
+                let newNote = Note(title: title, content: text, date: Date.now, sumEmotion: emoModel?.predictedLabel(for: text))
                 datasource.saveNotes(note: newNote)
             }
             

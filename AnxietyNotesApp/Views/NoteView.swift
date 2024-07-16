@@ -3,7 +3,7 @@ import SwiftUI
 
 struct NoteView: View {
     @State private var viewModel: ViewModel
-    @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var router: Router
     
     init(note: Note? = nil){
         _viewModel = State(initialValue: ViewModel(datasource: .shared, note: note))
@@ -12,10 +12,9 @@ struct NoteView: View {
     var body: some View {
         ZStack{
             VStack {
-                
                 HStack{
                     Button {
-                        dismiss()
+                        router.navigateToRoot()
                     } label: {
                         HStack(spacing: 3)
                         {
@@ -26,7 +25,7 @@ struct NoteView: View {
                     Spacer()
                     Text(viewModel.currentDateString())
                         .font(.system(size: 18))
-                        .foregroundColor(.black)
+                        .foregroundColor(Color(UIColor.label))
                         .fontWeight(.semibold)
                     Spacer()
                     //SAVE
@@ -35,6 +34,8 @@ struct NoteView: View {
                         HomeView.ViewModel.shared.fetchNotes()
                         viewModel.navigateToSaveNote = true
                     }
+                    .foregroundColor(viewModel.text.isEmpty ? Color.gray : Color.indigo)
+                    .disabled(viewModel.text.isEmpty)
                 }
                 .foregroundColor(.indigo)
                 HStack{
@@ -49,7 +50,7 @@ struct NoteView: View {
                     .onChange(of: viewModel.text) { oldValue, newValue in
                         if viewModel.text.last == "."{
                             if let sentence = viewModel.text.lastSentence(){
-                                viewModel.feeling = viewModel.indoModel?.predictedLabel(for: sentence) ?? "neutral"
+                                viewModel.feeling = viewModel.emoModel?.predictedLabel(for: sentence) ?? "neutral"
                             }
                         }
                     }
@@ -77,9 +78,6 @@ struct NoteView: View {
             //GRADIENT ANIMATED BG
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .onAppear(){
-            
-        }
         .background(
             GradientBackground(feeling: $viewModel.feeling)
         )
@@ -98,5 +96,5 @@ struct NoteView: View {
 #Preview {
     NoteView()
         .environment(\.locale, .init(identifier: "id"))
-    //        .colorScheme(.dark)
+//            .colorScheme(.dark)
 }
