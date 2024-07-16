@@ -25,6 +25,9 @@
 		5FF988882C4128FE00F6F658 /* ButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF988872C4128FE00F6F658 /* ButtonViewModel.swift */; };
 		5FF9888A2C41290500F6F658 /* GradientBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF988892C41290500F6F658 /* GradientBackgroundViewModel.swift */; };
 		5FF9888C2C41293600F6F658 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5FF9888B2C41293600F6F658 /* Localizable.xcstrings */; };
+		BF44265B2C4544420009DED4 /* AccessoryCircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44265A2C4544420009DED4 /* AccessoryCircularView.swift */; };
+		BF44265D2C45449B0009DED4 /* SmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44265C2C45449B0009DED4 /* SmallView.swift */; };
+		BF44265F2C455AAC0009DED4 /* MediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44265E2C455AAC0009DED4 /* MediumView.swift */; };
 		BF8E06BD2C4234C800DF5234 /* SwiftDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8E06BC2C4234C800DF5234 /* SwiftDataService.swift */; };
 		BF8E06BF2C4236C300DF5234 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8E06BE2C4236C300DF5234 /* HomeViewModel.swift */; };
 		BF8E06CD2C427D6700DF5234 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8E06CC2C427D6700DF5234 /* Router.swift */; };
@@ -86,6 +89,9 @@
 		5FF988892C41290500F6F658 /* GradientBackgroundViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBackgroundViewModel.swift; sourceTree = "<group>"; };
 		5FF9888B2C41293600F6F658 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = AnxietyNotesApp/Localizable.xcstrings; sourceTree = SOURCE_ROOT; };
 		5FF9888D2C45042300F6F658 /* NewNoteWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NewNoteWidgetExtension.entitlements; sourceTree = "<group>"; };
+		BF44265A2C4544420009DED4 /* AccessoryCircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryCircularView.swift; sourceTree = "<group>"; };
+		BF44265C2C45449B0009DED4 /* SmallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallView.swift; sourceTree = "<group>"; };
+		BF44265E2C455AAC0009DED4 /* MediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumView.swift; sourceTree = "<group>"; };
 		BF8E06BC2C4234C800DF5234 /* SwiftDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataService.swift; sourceTree = "<group>"; };
 		BF8E06BE2C4236C300DF5234 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BF8E06CC2C427D6700DF5234 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -235,6 +241,16 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		BF4426572C4543DC0009DED4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF44265A2C4544420009DED4 /* AccessoryCircularView.swift */,
+				BF44265C2C45449B0009DED4 /* SmallView.swift */,
+				BF44265E2C455AAC0009DED4 /* MediumView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BF8E06BB2C4234C800DF5234 /* SwiftData */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +279,7 @@
 		BF8E06D92C427E2600DF5234 /* NewNoteWidget */ = {
 			isa = PBXGroup;
 			children = (
+				BF4426572C4543DC0009DED4 /* Views */,
 				BF8E06DA2C427E2600DF5234 /* NewNoteWidgetBundle.swift */,
 				BF8E06DC2C427E2600DF5234 /* NewNoteWidget.swift */,
 				BF8E06DE2C427E2800DF5234 /* Assets.xcassets */,
@@ -404,7 +421,10 @@
 				BF8E06DD2C427E2600DF5234 /* NewNoteWidget.swift in Sources */,
 				BF8E06DB2C427E2600DF5234 /* NewNoteWidgetBundle.swift in Sources */,
 				D94930CE2C43E676005C203A /* Notes.swift in Sources */,
+				BF44265B2C4544420009DED4 /* AccessoryCircularView.swift in Sources */,
 				D94930CF2C43E679005C203A /* Feelings.swift in Sources */,
+				BF44265D2C45449B0009DED4 /* SmallView.swift in Sources */,
+				BF44265F2C455AAC0009DED4 /* MediumView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +563,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = RHGD2V8746;
+				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -583,7 +603,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = RHGD2V8746;
+				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -621,7 +641,7 @@
 				CODE_SIGN_ENTITLEMENTS = NewNoteWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RHGD2V8746;
+				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewNoteWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NewNoteWidget;
@@ -651,7 +671,7 @@
 				CODE_SIGN_ENTITLEMENTS = NewNoteWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RHGD2V8746;
+				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewNoteWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NewNoteWidget;
