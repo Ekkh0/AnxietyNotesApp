@@ -5,25 +5,26 @@ struct SmallCardView: View {
     var note: Note
     
     var body: some View {
-        VStack(alignment: .leading){
-            HStack{
-                Text(note.title ?? "")
-                    .font(.system(size: 17))
-                    .fontWeight(.medium)
-                Spacer()
-                
-                Circle()
-                    .fill(.red) // warna emotionnya, tapi blm dynamic
-                    .frame(width: 17)
+        NavigationLink(destination: NoteView(note: note) .navigationBarBackButtonHidden(true)) {
+            VStack(alignment: .leading){
+                HStack{
+                    Text(note.title ?? "")
+                        .font(.system(size: 17))
+                        .fontWeight(.medium)
+                    Spacer()
+                    
+                    Circle()
+                        .fill(.red) // warna emotionnya, tapi blm dynamic
+                        .frame(width: 17)
+                }
+                .padding(.horizontal, 33)
             }
-            .padding(.horizontal, 33)
+            .frame(width: 361, height: 65)
+            .background(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 20))
+            .shadow(color: .black.opacity(0.07), radius: 10, x: 0, y: 3)
+            .padding(5)
         }
-        .frame(width: 361, height: 65)
-        .background(.white)
-        .clipShape(RoundedRectangle(cornerRadius: 20))
-        .shadow(color: .black.opacity(0.07), radius: 10, x: 0, y: 3)
-        .padding(5)
-    
     }
 }
 

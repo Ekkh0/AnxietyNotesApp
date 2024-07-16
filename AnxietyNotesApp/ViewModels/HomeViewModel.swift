@@ -20,7 +20,6 @@ extension HomeView{
         private init(dataSource: SwiftDataService){
             self.dataSource = dataSource
             fetchNotes()
-            print(notes.count)
         }
         
         func fetchNotes(){

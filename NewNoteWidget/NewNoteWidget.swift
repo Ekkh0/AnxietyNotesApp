@@ -10,17 +10,15 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), sumEmotion: "")
+        SimpleEntry(date: Date(), notes: [])
     }
     
     @MainActor
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5){
-            let notes = SwiftDataService.shared.fetchNotes()
-            let latestNote = notes.first
-            let sumEmotion = latestNote?.sumEmotion ?? "neutral"
+            let notes = SwiftDataService.shared.fetchNotesForCurrentWeek()
             
-            let entry = SimpleEntry(date: Date.now, sumEmotion: sumEmotion)
+            let entry = SimpleEntry(date: Date.now, notes: notes)
             completion(entry)
         }
     }
@@ -30,9 +28,8 @@ struct Provider: TimelineProvider {
         var entries: [SimpleEntry] = []
         
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5){
-            let notes = SwiftDataService.shared.fetchNotes()
-            let latestNote = notes.first
-            let sumEmotion = latestNote?.sumEmotion ?? "neutral"
+            let notes = SwiftDataService.shared.fetchNotesForCurrentWeek()
+            
             
             // Generate a timeline consisting of five entries an hour apart, starting from the current date.
             let currentDate = Date.now
@@ -42,7 +39,7 @@ struct Provider: TimelineProvider {
             //
             //            entries.append(entry)
             //        }
-            let entry = SimpleEntry(date: currentDate, sumEmotion: sumEmotion)
+            let entry = SimpleEntry(date: currentDate, notes: notes)
             entries.append(entry)
             
             let timeline = Timeline(entries: entries, policy: .never)
@@ -53,109 +50,41 @@ struct Provider: TimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
-    let sumEmotion: String
+    //    let sumEmotion: String
+    let notes: [Note?]
 }
 
 struct NewNoteWidgetEntryView : View {
     @Environment(\.widgetFamily) var widgetFamily
-    
     var entry: Provider.Entry
     
     var body: some View {
-//        VStack {
-//            Link(destination: URL(string: "noteinmood://newNote")!){
-//                Image(systemName: "plus.circle.fill")
-//                    .resizable()
-//            }
-//        }
-        
-        let feeling = Feelings(label: entry.sumEmotion)
-        let isEmotionNil = entry.sumEmotion.isEmpty
-        let colors = feeling?.feelingColor ?? [.clear, .clear]
+        //        let feeling = Feelings(label: entry.sumEmotion)
+        //        let colors = feeling?.feelingColor ?? [.clear, .clear]
         
         
-        
-            
         switch widgetFamily{
         case .accessoryCircular:
-            Link(destination: URL(string: "noteinmood://newNote")!){
-                Image(systemName: "square.and.pencil")
-                //Text("emotion: \(entry.sumEmotion)")
-            }
-            
+            AccessoryCircularView()
         case .systemSmall:
-            VStack (alignment: .leading){
-                Circle()
-                    .fill(
-                        LinearGradient(
-                        stops: [
-                            Gradient.Stop(color: colors[0], location: 0.00),
-                            Gradient.Stop(color: colors[1], location: 1.00),
-                        ],
-                        
-                        startPoint: UnitPoint(x: 0.16, y: 0),
-                        endPoint: UnitPoint(x: 0.86, y: 1)
-                        )
-                    )
-                    .overlay(
-                        Circle()
-                            .stroke(entry.sumEmotion.isEmpty ? Color.dash : Color.clear, style: StrokeStyle(lineWidth: 1, dash: [5]))
-                            .frame(width: 100, height: 90)
-                            
-                    )
-                    .frame(width: 100, height: 90)
-                    .offset(x: -10)
-                    .shadow(color: .black.opacity(0.1), radius: 10, x: 3, y: 5)
-                
-                
-                Text(isEmotionNil ? "You haven't started today" : "Your today's mood is")
-                    .font(.system(size: 7.5))
-                    .padding(.top, 2)
-                    .padding(.bottom, -10)
-                    .foregroundColor(.bgEditIcon)
-
-                
-                HStack {
-                    Text(isEmotionNil ? "Write now!" : entry.sumEmotion)
-                        .font(.system(size: 18))
-                        .padding(.top, 3)
-                        .fontWeight(.bold)
-                        .foregroundColor(.bgEditIcon)
-                    
-                    Spacer()
-                    Button(action: {
-                        
-                    }, label: {
-                        Image(systemName: "square.and.pencil")
-                            .resizable()
-                            .offset(x: 0.5)
-                            .frame(width: 10, height: 10, alignment: .center)
-                            
-           
-                    })
-                    .foregroundColor(.editIcon)
-                    .background(.bgEditIcon)
-                    .accentColor(.bgEditIcon)
-                    .frame(width: 18, height: 18)
-                    .clipShape(Circle())
-                    .offset(y: 2)
-                    
-                }
-                .padding(.bottom, 20)
+            //            let todayNote = entry.notes.filter{note in
+            //                Calendar.current.isDate(note.date, inSameDayAs: Date())
+            //            }
+            
+            let todayNote = entry.notes.compactMap { $0 }.first { note in
+                Calendar.current.isDate(note.date, inSameDayAs: Date())
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding(.top, 20)
             
+            SmallView(note: todayNote)
         case .systemMedium:
-            Text("Medium")
-            
+            MediumView(notes: entry.notes)
         default:
             Text("Default")
         }
         
     }
     
-
+    
     
 }
 
@@ -167,9 +96,9 @@ struct NewNoteWidget: Widget {
             if #available(iOS 17.0, *) {
                 NewNoteWidgetEntryView(entry: entry)
                     .containerBackground(.fill.tertiary, for: .widget)
-                    
                 
-                    
+                
+                
             } else {
                 NewNoteWidgetEntryView(entry: entry)
                     .padding()
@@ -184,13 +113,15 @@ struct NewNoteWidget: Widget {
     }
 }
 
-#Preview(as: .accessoryCircular) {
+#Preview(as: .systemSmall) {
     NewNoteWidget()
 } timeline: {
-    SimpleEntry(date: .now, sumEmotion: "Neutral")
-    SimpleEntry(date: .now, sumEmotion: "Joy")
-    SimpleEntry(date: .now, sumEmotion: "Sad")
-    SimpleEntry(date: .now, sumEmotion: "Fear")
-    SimpleEntry(date: .now, sumEmotion: "Anger")
-    SimpleEntry(date: .now, sumEmotion: "")
+    //                SimpleEntry(date: .now, sumEmotion: "Neutral")
+    //                SimpleEntry(date: .now, sumEmotion: "Joy")
+    //                SimpleEntry(date: .now, sumEmotion: "Sad")
+    //                SimpleEntry(date: .now, sumEmotion: "Fear")
+    //                SimpleEntry(date: .now, sumEmotion: "Anger")
+    //                SimpleEntry(date: .now, sumEmotion: "")
+    SimpleEntry(date: .now, notes: [nil, nil, nil, nil, nil, nil, nil])
 }
+

@@ -11,8 +11,8 @@ import SwiftUI
 final class Router: ObservableObject {
     
     public enum Destination: Codable, Hashable {
-        case home
-        case newNote
+        case homeView
+        case noteView(noteID: UUID?)
     }
     
     @Published var navPath = NavigationPath()
