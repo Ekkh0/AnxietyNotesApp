@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SaveNoteView: View {
     @State private var navigateToHome = false
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         ZStack{
@@ -18,12 +19,19 @@ struct SaveNoteView: View {
                 .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height)
 
             VStack {
+                
+                Text("Take a deep breath \nand feel the relief")
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 150)
+                    .bold()
+                
                 Spacer()
                 Button(action: {
                     navigateToHome = true
                 }, label: {
                     RoundedRectangle(cornerRadius: 30)
-                        .fill(Color(red: 0.05, green: 0.05, blue: 0.05).opacity(0.44))
+                        .fill(.saveNoteButton)
                         .fill(.ultraThinMaterial)
                         .stroke(Color(red: 0.78, green: 0.78, blue: 0.78), lineWidth: 1)
                         

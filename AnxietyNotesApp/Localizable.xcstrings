@@ -47,12 +47,6 @@
         }
       }
     },
-    "Lorem Ipsum" : {
-
-    },
-    "Note your mood here :)" : {
-
-    },
     "Quick New Notes" : {
 
     },
@@ -86,10 +80,14 @@
         }
       }
     },
+    "Take a deep breath \nand feel the relief" : {
+
+    },
     "This is a widget to add new notes quickly." : {
 
     },
     "Title..." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

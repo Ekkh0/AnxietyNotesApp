@@ -38,13 +38,14 @@ struct NoteView: View {
                     .disabled(viewModel.text.isEmpty)
                 }
                 .foregroundColor(.indigo)
-                HStack{
-                    //INPUT TITLE
-                    TextField("Title...", text: $viewModel.title)
-                        .bold()
-                        .font(.system(size: 48))
-                    
-                }
+                
+//                HStack{
+//                    //INPUT TITLE
+//                    TextField("Title...", text: $viewModel.title)
+//                        .bold()
+//                        .font(.system(size: 48))
+//                    
+//                }
                 //INPUT DESC
                 TextEditor(text: $viewModel.text)
                     .onChange(of: viewModel.text) { oldValue, newValue in

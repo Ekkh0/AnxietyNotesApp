@@ -11,7 +11,9 @@ import WidgetKit
 struct AccessoryCircularView: View {
     var body: some View {
         Link(destination: URL(string: "noteinmood://newNote")!){
-            Image(systemName: "square.and.pencil")
+            Image("lockscreen")
+                .resizable()
+                .scaledToFit()
             //Text("emotion: \(entry.sumEmotion)")
         }
     }
