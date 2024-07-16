@@ -2,17 +2,11 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var viewModel = HomeView.ViewModel.shared
+    var colors = ["Latest", "Oldest"]
+    @State private var selectedColor = "Latest"
     
     init() {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.indigo]
-        let notes = SwiftDataService.shared.fetchNotesForCurrentWeek()
-        var num = 1
-        
-        for note in notes{
-            print("\(num). \(note?.date) = \(note?.sumEmotion)")
-            num += 1
-        }
-        
     }
     
     var body: some View {
@@ -21,6 +15,7 @@ struct HomeView: View {
             ZStack{
                 Color.bg
                     .ignoresSafeArea()
+
                 VStack {
                     VStack{
                         Image(.notebookBro1) // test branch ages
@@ -39,6 +34,8 @@ struct HomeView: View {
                     }
                     .frame(maxHeight: .infinity, alignment: .center)
                     .padding(.bottom, 16)
+                    
+                    
                 }
                 .padding()
                 .navigationTitle("NoteInMood")
@@ -57,21 +54,22 @@ struct HomeView: View {
                             }
                         }
                         .popover(isPresented: $viewModel.showingPopover) {
-                            Text("Your content here")
-                                .font(.headline)
-                                .padding()
-                                .frame(minWidth: 200, minHeight: 200)
-                                .presentationCompactAdaptation(.popover)
+                            Form{
+                                Picker("", selection: $selectedColor) {
+                                    ForEach(colors, id: \.self) {
+                                        Text($0)
+                                    }
+                                }
+                                .pickerStyle(.inline)
+                            }
+                            .presentationCompactAdaptation(.popover)
+                            .frame(minWidth: 200, minHeight: 150)
                         }
-                        
-                        //                        NavigationLink(destination: self) {
-                        //                                Image(systemName: "line.3.horizontal.decrease.circle.fill")
-                        //                                    .foregroundColor(.indigo)
-                        //                        }
                     }
                     ToolbarItem(placement: .bottomBar)
                     {
                         NavigationLink(destination: NoteView() .navigationBarBackButtonHidden(true)) {
+                            
                             Image(systemName: "square.and.pencil")
                                 .foregroundColor(.indigo)
                         }
@@ -80,10 +78,19 @@ struct HomeView: View {
                 .toolbarBackground(.visible, for: .bottomBar)
                 
                 ScrollView {
-                    ForEach(viewModel.notes, id: \.self) { note in
-                        SmallCardView(note: note)
+                    if selectedColor == "Latest" {
+                        ForEach(viewModel.notes, id: \.self) { note in
+                            SmallCardView(note: note)
+                        }
+                    }
+                    else{
+                        ForEach(viewModel.notes.reversed(), id: \.self) { note in
+                            SmallCardView(note: note)
+                        }
                     }
                 }
+                
+                
             }
             .onChange(of: viewModel.notes) {
                 for note in viewModel.notes{
@@ -91,10 +98,13 @@ struct HomeView: View {
                 }
             }
         }
+
     }
+    
+    
 }
 
 #Preview {
     HomeView()
-    //        .colorScheme(.dark)
+//        .colorScheme(.dark)
 }
