@@ -38,9 +38,9 @@ struct CardView: View {
             VStack {
                 HStack{
                     if let note = note{
-                        Text(note.title ?? "")
+                        Text("\(note.date.formatted(date: .abbreviated, time: .shortened))")
                             .opacity(0.75)
-                            .font(.system(size: 20))
+                            .font(.system(size: 16))
                             .fontWeight(.semibold)
                     }
                     
@@ -49,7 +49,16 @@ struct CardView: View {
                     
                     
                     Circle()
-                        .fill(colors[0]) // warna emotionnya, tapi blm dynamic
+                        .fill(
+                            LinearGradient(
+                                gradient: Gradient(stops: [
+                                    Gradient.Stop(color: colors[1], location: 0.00),
+                                    Gradient.Stop(color: colors[0], location: 1.00)
+                                ]),
+                                startPoint: UnitPoint(x: 0.86, y: 1),
+                                endPoint: UnitPoint(x: 0.16, y: 0)
+                            )
+                        )
                         .frame(width: 17)
                 }
                 

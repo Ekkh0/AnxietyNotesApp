@@ -80,9 +80,10 @@ struct HomeView: View {
 //                ScrollView {
                     List{
                         ForEach(selectedColor == "Latest" ? viewModel.notes : viewModel.notes.reversed(), id: \.self) { note in
-                            CardView(note: note)
+                            SmallCardView(note: note)
                                 .listRowSeparator(.hidden)
                                 .listSectionSeparator(.hidden)
+                                
                                 .overlay{
                                     NavigationLink(destination: NoteView(note: note)) {
                                         EmptyView()
