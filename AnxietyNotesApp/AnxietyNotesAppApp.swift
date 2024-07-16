@@ -39,9 +39,9 @@ struct AnxietyNotesAppApp: App {
                         }
                         if let stringID = parameters["noteID"], let noteID = UUID(uuidString: stringID){
                             router.navigate(to: .noteView(noteID: noteID))
+                        }else{
+                            router.navigate(to: .noteView(noteID: nil))
                         }
-                    }else{
-                        router.navigate(to: .noteView(noteID: nil))
                     }
                 }
             })

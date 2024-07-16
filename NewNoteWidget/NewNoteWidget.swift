@@ -29,16 +29,7 @@ struct Provider: TimelineProvider {
         
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5){
             let notes = SwiftDataService.shared.fetchNotesForCurrentWeek()
-            
-            
-            // Generate a timeline consisting of five entries an hour apart, starting from the current date.
             let currentDate = Date.now
-            //        for hourOffset in 0 ..< 5 {
-            //            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            //            let entry = SimpleEntry(date: entryDate, notes: notes)
-            //
-            //            entries.append(entry)
-            //        }
             let entry = SimpleEntry(date: currentDate, notes: notes)
             entries.append(entry)
             
@@ -50,7 +41,6 @@ struct Provider: TimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
-    //    let sumEmotion: String
     let notes: [Note?]
 }
 
@@ -59,18 +49,10 @@ struct NewNoteWidgetEntryView : View {
     var entry: Provider.Entry
     
     var body: some View {
-        //        let feeling = Feelings(label: entry.sumEmotion)
-        //        let colors = feeling?.feelingColor ?? [.clear, .clear]
-        
-        
         switch widgetFamily{
         case .accessoryCircular:
             AccessoryCircularView()
         case .systemSmall:
-            //            let todayNote = entry.notes.filter{note in
-            //                Calendar.current.isDate(note.date, inSameDayAs: Date())
-            //            }
-            
             let todayNote = entry.notes.compactMap { $0 }.first { note in
                 Calendar.current.isDate(note.date, inSameDayAs: Date())
             }

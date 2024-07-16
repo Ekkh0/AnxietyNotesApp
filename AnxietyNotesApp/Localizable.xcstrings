@@ -1,17 +1,48 @@
 {
-  "sourceLanguage" : "id",
+  "sourceLanguage" : "en",
   "strings" : {
     "" : {
 
     },
     "Back" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kembali"
+          }
+        }
+      }
     },
     "Done" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selesai"
+          }
+        }
+      }
     },
-    "Express and understand your feelings,\n bring clarity to your thoughts." : {
-
+    "Express your feeling" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Curahkan perasaanmu"
+          }
+        }
+      }
+    },
+    "How was your day?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bagaimana harimu?"
+          }
+        }
+      }
     },
     "Lorem Ipsum" : {
 
@@ -19,19 +50,47 @@
     "Note your mood here :)" : {
 
     },
-    "NoteInMood" : {
-
+    "Save Notes" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan Notes"
+          }
+        }
+      }
     },
-    "Save Note" : {
-
+    "Share your feeling with us…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ceritakan perasaanmu pada kami…"
+          }
+        }
+      }
     },
-    "Start Writing" : {
-
+    "Start writing to help you calm and relieve your anxiety" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulailah menulis untuk membantumu tenang dan meredakan kecemasan"
+          }
+        }
+      }
     },
     "Title..." : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Judul..."
+          }
+        }
+      }
     },
-    "Write your journal here..." : {
+    "Your content here" : {
 
     }
   },

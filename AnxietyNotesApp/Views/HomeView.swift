@@ -7,26 +7,26 @@ struct HomeView: View {
     
     init() {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.indigo]
+        let notes = SwiftDataService.shared.fetchNotesForCurrentWeek()
+        var num = 1
     }
     
     var body: some View {
-        
-        NavigationStack{
             ZStack{
                 Color.bg
                     .ignoresSafeArea()
 
                 VStack {
                     VStack{
-                        Image(.notebookBro1) // test branch ages
+                        Image(.notebookBro1)
                             .resizable()
                             .frame(width: 198, height: 198)
                         VStack {
-                            Text("Start Writing")
+                            Text("Express your feeling")
                                 .font(.title3)
                                 .fontWeight(.bold)
                                 .padding(.bottom, 4)
-                            Text("Express and understand your feelings,\n bring clarity to your thoughts.")
+                            Text("Start writing to help you calm and relieve your anxiety")
                                 .multilineTextAlignment(.center)
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
@@ -38,7 +38,7 @@ struct HomeView: View {
                     
                 }
                 .padding()
-                .navigationTitle("NoteInMood")
+                .navigationTitle("How was your day?")
                 .navigationBarTitleDisplayMode(.large)
                 .navigationBarBackButtonHidden()
                 .toolbar {
@@ -102,7 +102,7 @@ struct HomeView: View {
     }
     
     
-}
+
 
 #Preview {
     HomeView()
