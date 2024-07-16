@@ -10,9 +10,6 @@ import WidgetKit
 
 struct SmallView: View {
     let note: Note?
-    //    let feeling: Feelings?
-    //    let sumEmotion: String?
-    //    let colors: [Color]?
     
     var body: some View {
         let colors: [Color] = {
@@ -22,7 +19,13 @@ struct SmallView: View {
                 return [.black, .white]
             }
         }()
-        let isEmotionNil: Bool = note?.sumEmotion != nil
+        let isEmotionNil: Bool = {
+            if let note = note{
+                return note.sumEmotion != nil
+            }else{
+                return true
+            }
+        }()
         ZStack{
             Rectangle()
                 .fill(
@@ -87,6 +90,9 @@ struct SmallView: View {
                                 .imageScale(.small)
                         }
                         .frame(width: 20, height: 20)
+                    }
+                    .onTapGesture {
+                        print("Pressed")
                     }
                 }
             }

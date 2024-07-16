@@ -7,31 +7,23 @@ struct HomeView: View {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.indigo]
         let notes = SwiftDataService.shared.fetchNotesForCurrentWeek()
         var num = 1
-        
-        for note in notes{
-            print("\(num). \(note?.date) = \(note?.sumEmotion)")
-            num += 1
-        }
-        
     }
     
     var body: some View {
-        
-        NavigationStack{
             ZStack{
                 Color.bg
                     .ignoresSafeArea()
                 VStack {
                     VStack{
-                        Image(.notebookBro1) // test branch ages
+                        Image(.notebookBro1)
                             .resizable()
                             .frame(width: 198, height: 198)
                         VStack {
-                            Text("Start Writing")
+                            Text("Express your feeling")
                                 .font(.title3)
                                 .fontWeight(.bold)
                                 .padding(.bottom, 4)
-                            Text("Express and understand your feelings,\n bring clarity to your thoughts.")
+                            Text("Start writing to help you calm and relieve your anxiety")
                                 .multilineTextAlignment(.center)
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
@@ -41,7 +33,7 @@ struct HomeView: View {
                     .padding(.bottom, 16)
                 }
                 .padding()
-                .navigationTitle("NoteInMood")
+                .navigationTitle("How was your day?")
                 .navigationBarTitleDisplayMode(.large)
                 .navigationBarBackButtonHidden()
                 .toolbar {
@@ -63,11 +55,6 @@ struct HomeView: View {
                                 .frame(minWidth: 200, minHeight: 200)
                                 .presentationCompactAdaptation(.popover)
                         }
-                        
-                        //                        NavigationLink(destination: self) {
-                        //                                Image(systemName: "line.3.horizontal.decrease.circle.fill")
-                        //                                    .foregroundColor(.indigo)
-                        //                        }
                     }
                     ToolbarItem(placement: .bottomBar)
                     {
@@ -90,7 +77,6 @@ struct HomeView: View {
                     print(note.title ?? "")
                 }
             }
-        }
     }
 }
 

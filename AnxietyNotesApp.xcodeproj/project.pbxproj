@@ -347,7 +347,7 @@
 			};
 			buildConfigurationList = 5F7C4DDC2C3BF43E00182C18 /* Build configuration list for PBXProject "AnxietyNotesApp" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = id;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
