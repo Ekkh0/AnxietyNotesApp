@@ -17,16 +17,33 @@ extension HomeView{
         var notes: [Note] = []
         var showingPopover = false
         var isDataChanged = false
-        var searchText = ""
-        var searchIsActive = false
+        var selectedEmotion = "Anger"{
+            didSet {
+                fetchNotesByEmotion()
+            }
+        }
+        
+        var selectedSorting = "Latest" // Add this property to store the selected sorting option
+                
         
         private init(dataSource: SwiftDataService){
             self.dataSource = dataSource
             fetchNotes()
+//            fetchNotesByEmotion()
         }
+        
+//        private init(dataSourceSorted : SwiftDataService){
+//            self.dataSource = dataSourceSorted
+//            fetchNotesByEmotion()
+//        }
         
         func fetchNotes(){
             notes = dataSource.fetchNotes()
+        }
+        
+        func fetchNotesByEmotion(){
+            print("Called")
+            notes = dataSource.fetchNotesByEmotion(emotion: selectedEmotion)
         }
         
         func getMonth(date: Date) -> String {
