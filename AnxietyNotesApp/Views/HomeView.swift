@@ -79,6 +79,9 @@ struct HomeView: View {
                     List{
                         ForEach(selectedColor == "Latest" ? viewModel.notes : viewModel.notes.reversed(), id: \.self) { note in
                             SmallCardView(note: note)
+                                .listRowSeparator(.hidden)
+                                .listSectionSeparator(.hidden)
+                                
                                 .overlay{
                                     NavigationLink(destination: NoteView(note: note)) {
                                         EmptyView()
@@ -98,6 +101,7 @@ struct HomeView: View {
                         }
                     }
                     .listStyle(.plain)
+                    
 //                }
             }
             .onChange(of: viewModel.notes) {
