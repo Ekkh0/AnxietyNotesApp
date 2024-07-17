@@ -3,7 +3,7 @@ import SwiftUI
 
 struct NoteView: View {
     @State private var viewModel: ViewModel
-    @EnvironmentObject var router: Router
+    @Environment(\.dismiss) var dismiss
     
     init(note: Note? = nil){
         _viewModel = State(initialValue: ViewModel(datasource: .shared, note: note))
@@ -14,7 +14,7 @@ struct NoteView: View {
             VStack {
                 HStack{
                     Button {
-                        router.navigateToRoot()
+                        dismiss()
                     } label: {
                         HStack(spacing: 3)
                         {

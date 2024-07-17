@@ -5,6 +5,7 @@ struct HomeView: View {
     @State private var viewModel = HomeView.ViewModel.shared
     var colors = ["Latest", "Oldest"]
     @State private var selectedColor = "Latest"
+    @EnvironmentObject var router: Router
     
     init() {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.indigo]

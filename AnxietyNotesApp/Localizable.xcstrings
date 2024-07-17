@@ -9,7 +9,7 @@
     },
     "Back" : {
       "localizations" : {
-        "en" : {
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kembali"
@@ -22,7 +22,7 @@
     },
     "Done" : {
       "localizations" : {
-        "en" : {
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Selesai"
@@ -32,7 +32,7 @@
     },
     "Express your feeling" : {
       "localizations" : {
-        "en" : {
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Curahkan perasaanmu"
@@ -42,9 +42,9 @@
     },
     "How was your day?" : {
       "localizations" : {
-        "en" : {
+        "id" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Bagaimana harimu?"
           }
         }
@@ -55,7 +55,7 @@
     },
     "Save Notes" : {
       "localizations" : {
-        "en" : {
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Simpan Notes"
@@ -65,7 +65,7 @@
     },
     "Share your feeling with us…" : {
       "localizations" : {
-        "en" : {
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ceritakan perasaanmu pada kami…"
@@ -75,7 +75,7 @@
     },
     "Start writing to help you calm and relieve your anxiety" : {
       "localizations" : {
-        "en" : {
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mulailah menulis untuk membantumu tenang dan meredakan kecemasan"
@@ -84,15 +84,29 @@
       }
     },
     "Take a deep breath \nand feel the relief" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ambil nafas yang panjang dan rasakan kesegarannya "
+          }
+        }
+      }
     },
     "This is a widget to add new notes quickly." : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ini adalah widget untuk menambahkan notes dengan cepat."
+          }
+        }
+      }
     },
     "Title..." : {
       "extractionState" : "stale",
       "localizations" : {
-        "en" : {
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Judul..."
@@ -101,19 +115,54 @@
       }
     },
     "Write everyday to complete!" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tulis setiap hari untuk memenuhi!"
+          }
+        }
+      }
     },
     "Write now!" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tulis!"
+          }
+        }
+      }
     },
     "You haven't started today" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kamu belum mulai hari ini"
+          }
+        }
+      }
     },
     "Your last 7 days" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 Hari terakhirmu"
+          }
+        }
+      }
     },
     "Your today's mood is" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mood kamu hari ini adalah"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

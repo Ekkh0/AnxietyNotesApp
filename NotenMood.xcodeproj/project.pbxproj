@@ -69,7 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5F7C4DE12C3BF43E00182C18 /* AnxietyNotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnxietyNotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F7C4DE12C3BF43E00182C18 /* NotenMood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotenMood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7C4DE42C3BF43E00182C18 /* AnxietyNotesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnxietyNotesAppApp.swift; sourceTree = "<group>"; };
 		5F7C4DE62C3BF43E00182C18 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		5F7C4DE82C3BF43F00182C18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		5F7C4DE22C3BF43E00182C18 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5F7C4DE12C3BF43E00182C18 /* AnxietyNotesApp.app */,
+				5F7C4DE12C3BF43E00182C18 /* NotenMood.app */,
 				BF8E06D32C427E2600DF5234 /* NewNoteWidgetExtension.appex */,
 			);
 			name = Products;
@@ -292,9 +292,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5F7C4DE02C3BF43E00182C18 /* AnxietyNotesApp */ = {
+		5F7C4DE02C3BF43E00182C18 /* NotenMood */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5F7C4DF02C3BF43F00182C18 /* Build configuration list for PBXNativeTarget "AnxietyNotesApp" */;
+			buildConfigurationList = 5F7C4DF02C3BF43F00182C18 /* Build configuration list for PBXNativeTarget "NotenMood" */;
 			buildPhases = (
 				5F7C4DDD2C3BF43E00182C18 /* Sources */,
 				5F7C4DDE2C3BF43E00182C18 /* Frameworks */,
@@ -306,9 +306,9 @@
 			dependencies = (
 				BF8E06E22C427E2800DF5234 /* PBXTargetDependency */,
 			);
-			name = AnxietyNotesApp;
+			name = NotenMood;
 			productName = AnxietyNotesApp;
-			productReference = 5F7C4DE12C3BF43E00182C18 /* AnxietyNotesApp.app */;
+			productReference = 5F7C4DE12C3BF43E00182C18 /* NotenMood.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BF8E06D22C427E2600DF5234 /* NewNoteWidgetExtension */ = {
@@ -346,7 +346,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5F7C4DDC2C3BF43E00182C18 /* Build configuration list for PBXProject "AnxietyNotesApp" */;
+			buildConfigurationList = 5F7C4DDC2C3BF43E00182C18 /* Build configuration list for PBXProject "NotenMood" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -360,7 +360,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5F7C4DE02C3BF43E00182C18 /* AnxietyNotesApp */,
+				5F7C4DE02C3BF43E00182C18 /* NotenMood */,
 				BF8E06D22C427E2600DF5234 /* NewNoteWidgetExtension */,
 			);
 		};
@@ -565,7 +565,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
+				DEVELOPMENT_TEAM = RHGD2V8746;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -605,7 +605,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
+				DEVELOPMENT_TEAM = RHGD2V8746;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -643,7 +643,7 @@
 				CODE_SIGN_ENTITLEMENTS = NewNoteWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
+				DEVELOPMENT_TEAM = RHGD2V8746;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewNoteWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NewNoteWidget;
@@ -673,7 +673,7 @@
 				CODE_SIGN_ENTITLEMENTS = NewNoteWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
+				DEVELOPMENT_TEAM = RHGD2V8746;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewNoteWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NewNoteWidget;
@@ -699,7 +699,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5F7C4DDC2C3BF43E00182C18 /* Build configuration list for PBXProject "AnxietyNotesApp" */ = {
+		5F7C4DDC2C3BF43E00182C18 /* Build configuration list for PBXProject "NotenMood" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F7C4DEE2C3BF43F00182C18 /* Debug */,
@@ -708,7 +708,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5F7C4DF02C3BF43F00182C18 /* Build configuration list for PBXNativeTarget "AnxietyNotesApp" */ = {
+		5F7C4DF02C3BF43F00182C18 /* Build configuration list for PBXNativeTarget "NotenMood" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F7C4DF12C3BF43F00182C18 /* Debug */,
