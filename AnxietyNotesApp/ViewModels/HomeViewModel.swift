@@ -22,6 +22,8 @@ extension HomeView{
                 fetchNotesByEmotion()
             }
         }
+        var searchText = ""
+        var searchIsActive = false
         
         var selectedSorting = "Latest" // Add this property to store the selected sorting option
                 

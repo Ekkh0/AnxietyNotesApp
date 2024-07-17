@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5F7C4DE02C3BF43E00182C18"
-               BuildableName = "NotenMood.app"
-               BlueprintName = "NotenMood"
-               ReferencedContainer = "container:NotenMood.xcodeproj">
+               BuildableName = "NoteNMood.app"
+               BlueprintName = "NoteNMood"
+               ReferencedContainer = "container:NoteNMood.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5F7C4DE02C3BF43E00182C18"
-            BuildableName = "NotenMood.app"
-            BlueprintName = "NotenMood"
-            ReferencedContainer = "container:NotenMood.xcodeproj">
+            BuildableName = "NoteNMood.app"
+            BlueprintName = "NoteNMood"
+            ReferencedContainer = "container:NoteNMood.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5F7C4DE02C3BF43E00182C18"
-            BuildableName = "NotenMood.app"
-            BlueprintName = "NotenMood"
-            ReferencedContainer = "container:NotenMood.xcodeproj">
+            BuildableName = "NoteNMood.app"
+            BlueprintName = "NoteNMood"
+            ReferencedContainer = "container:NoteNMood.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -35,7 +35,7 @@ struct GradientBackground: View{
                 .foregroundColor(Color(UIColor.systemBackground))
                 .frame(width: UIScreen.main.bounds.width-5, height: UIScreen.main.bounds.height-5)
                 .cornerRadius(50)
-                .padding([.bottom], 25)
+                .padding([.bottom], 55)
                 .blur(radius: 20 )
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

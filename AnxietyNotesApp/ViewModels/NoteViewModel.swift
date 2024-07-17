@@ -48,6 +48,12 @@ extension NoteView{
             return dateFormatter.string(from: Date())
         }
         
+        func getDateString(date: Date) -> String {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "EEEE, MMM d"
+            return dateFormatter.string(from: date)
+        }
+        
         func saveNote(){
             if let note = note{
                 note.title = title

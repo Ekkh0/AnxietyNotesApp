@@ -13,33 +13,6 @@ struct NoteView: View {
         ZStack{
             VStack {
                 HStack{
-                    Button {
-                        dismiss()
-                    } label: {
-                        HStack(spacing: 3)
-                        {
-                            Image(systemName: "chevron.left")
-                            Text("Back")
-                        }
-                    }
-                    Spacer()
-                    Text(viewModel.currentDateString())
-                        .font(.system(size: 18))
-                        .foregroundColor(Color(UIColor.label))
-                        .fontWeight(.semibold)
-                    Spacer()
-                    //SAVE
-                    Button("Done") {
-                        viewModel.saveNote()
-                        HomeView.ViewModel.shared.fetchNotes()
-                        viewModel.navigateToSaveNote = true
-                    }
-                    .foregroundColor(viewModel.text.isEmpty ? Color.gray : Color.indigo)
-                    .disabled(viewModel.text.isEmpty)
-                }
-                .foregroundColor(.indigo)
-                
-                HStack{
                     //INPUT TITLE
                     TextField("Title...", text: $viewModel.title)
                         .bold()
@@ -78,6 +51,20 @@ struct NoteView: View {
             .padding(8)
             //GRADIENT ANIMATED BG
         }
+        .toolbarTitleDisplayMode(.inline)
+        .navigationTitle(viewModel.note != nil ? viewModel.getDateString(date: (viewModel.note?.date)!) : viewModel.currentDateString())
+        .toolbar{
+            ToolbarItem(placement: .topBarTrailing){
+                    //SAVE
+                    Button("Done") {
+                        viewModel.saveNote()
+                        HomeView.ViewModel.shared.fetchNotes()
+                        viewModel.navigateToSaveNote = true
+                    }
+                    .foregroundColor(viewModel.text.isEmpty ? Color.gray : Color.indigo)
+                    .disabled(viewModel.text.isEmpty)
+            }
+        }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
             GradientBackground(feeling: $viewModel.feeling)
@@ -90,7 +77,7 @@ struct NoteView: View {
             label: {
                 EmptyView()
             })
-        .navigationBarBackButtonHidden(true)
+//        .navigationBarBackButtonHidden(true)
     }
 }
 

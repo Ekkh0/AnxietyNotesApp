@@ -51,7 +51,6 @@ struct SaveNoteView: View {
                 label: {
                     EmptyView()
                 })
-                
         }
         .ignoresSafeArea(.all)
         .navigationBarBackButtonHidden(true)
