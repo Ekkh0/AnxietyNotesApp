@@ -95,7 +95,7 @@ struct NewNoteWidget: Widget {
     }
 }
 
-#Preview(as: .systemMedium) {
+#Preview(as: .accessoryCircular) {
     NewNoteWidget()
 } timeline: {
     //                SimpleEntry(date: .now, sumEmotion: "Neutral")
