@@ -103,7 +103,10 @@ struct HomeView: View {
                         }
                     }
                     .listStyle(.plain)
-                    
+                    .searchable(text: $viewModel.searchText, isPresented: $viewModel.searchIsActive, placement: .navigationBarDrawer(displayMode: .always))
+                    .onChange(of: viewModel.searchText) { oldValue, newValue in
+                        viewModel.searchNote()
+                    }
 //                }
             }
             .background(Color.bg)
@@ -115,9 +118,6 @@ struct HomeView: View {
         }
 
     }
-    
-    
-
 
 #Preview {
     HomeView()

@@ -17,6 +17,8 @@ extension HomeView{
         var notes: [Note] = []
         var showingPopover = false
         var isDataChanged = false
+        var searchText = ""
+        var searchIsActive = false
         
         private init(dataSource: SwiftDataService){
             self.dataSource = dataSource
@@ -35,6 +37,13 @@ extension HomeView{
         
         func deleteNote(note: Note){
             dataSource.deleteNote(note: note)
+        }
+        
+        func searchNote(){
+            fetchNotes()
+            if searchText != ""{
+                notes = notes.filter{($0.content?.lowercased().contains(searchText.lowercased())) ?? false || ($0.title?.lowercased().contains(searchText.lowercased())) ?? false}
+            }
         }
     }
 }

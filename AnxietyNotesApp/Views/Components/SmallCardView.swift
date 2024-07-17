@@ -15,11 +15,17 @@ struct SmallCardView: View {
         VStack(alignment: .leading){
             HStack (spacing: 10 ){
                 if let note = note{
-                    Text(note.content ?? "")
-                        .opacity(0.75)
-                        .font(.system(size: 17))
-                        .fontWeight(.semibold)
-                        .lineLimit(1)
+                    VStack(alignment: .leading){
+                        Text(note.title!)
+                            .opacity(0.75)
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                            .lineLimit(1)
+                        Text(note.content!)
+                            .opacity(0.75)
+                            .font(.caption)
+                            .lineLimit(1)
+                    }
                 }
                 Spacer()
                 Circle()
