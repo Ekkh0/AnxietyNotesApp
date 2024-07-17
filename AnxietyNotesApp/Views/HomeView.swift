@@ -3,8 +3,14 @@ import WidgetKit
 
 struct HomeView: View {
     @State private var viewModel = HomeView.ViewModel.shared
-    var colors = ["Latest", "Oldest"]
-    @State private var selectedColor = "Latest"
+    var sorter = ["All", "Neutral", "Happy", "Sad", "Fear", "Anger"]
+    @State private var selectedPicker = "Latest" {
+        didSet {
+            print("Changed")
+            viewModel.selectedEmotion = selectedPicker
+            viewModel.fetchNotesByEmotion()
+        }
+    }
     @EnvironmentObject var router: Router
     
     init() {
@@ -53,16 +59,17 @@ struct HomeView: View {
                             }
                         }
                         .popover(isPresented: $viewModel.showingPopover) {
-                            Form{
-                                Picker("", selection: $selectedColor) {
-                                    ForEach(colors, id: \.self) {
-                                        Text($0)
+                            
+                            List {
+                                Picker("Sort By: ", selection: $selectedPicker) {
+                                        ForEach(sorter, id: \.self) {
+                                            Text($0)
+                                        }
                                     }
-                                }
-                                .pickerStyle(.inline)
+                                    .pickerStyle(.inline)
                             }
-                            .presentationCompactAdaptation(.popover)
-                            .frame(minWidth: 200, minHeight: 150)
+                            .presentationCompactAdaptation(.none)
+                            .frame(minWidth: 200, minHeight: 320)
                         }
                     }
                     ToolbarItem(placement: .bottomBar)
@@ -78,7 +85,7 @@ struct HomeView: View {
                 
 //                ScrollView {
                     List{
-                        ForEach(selectedColor == "Latest" ? viewModel.notes : viewModel.notes.reversed(), id: \.self) { note in
+                        ForEach(viewModel.notes, id: \.self) { note in
                             SmallCardView(note: note)
                                 .listRowSeparator(.hidden)
                                 .listSectionSeparator(.hidden)
@@ -105,9 +112,14 @@ struct HomeView: View {
                     
 //                }
             }
-            .onChange(of: viewModel.notes) {
-                for note in viewModel.notes{
-                    print(note.id.uuidString)
+            .onChange(of: selectedPicker) {
+                print("Changed")
+                viewModel.selectedEmotion = selectedPicker
+                if selectedPicker == "All"{
+                    viewModel.fetchNotes()
+                }
+                else{
+                    viewModel.fetchNotesByEmotion()
                 }
             }
         }

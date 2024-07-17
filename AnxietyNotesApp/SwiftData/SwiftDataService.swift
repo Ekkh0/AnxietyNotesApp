@@ -32,6 +32,21 @@ class SwiftDataService{
         }
     }
     
+    // New method to fetch notes by emotion
+     func fetchNotesByEmotion(emotion: String) -> [Note] {
+         var fetchDescriptor = FetchDescriptor<Note>()
+         fetchDescriptor.predicate = #Predicate { note in
+             note.sumEmotion == emotion
+         }
+         fetchDescriptor.sortBy = [SortDescriptor(\Note.date, order: .reverse)]
+         
+         do {
+             return try modelContext.fetch(fetchDescriptor)
+         } catch {
+             fatalError("Failed to fetch notes by emotion: \(error.localizedDescription)")
+         }
+     }
+    
     func fetchNotesForCurrentWeek() -> [Note?] {
         let calendar = Calendar.current
         let now = Date()
@@ -88,6 +103,8 @@ class SwiftDataService{
             fatalError("Failed to fetch note by id: \(error.localizedDescription)")
         }
     }
+    
+
     
     func deleteNote(note: Note) {
         modelContext.delete(note)
