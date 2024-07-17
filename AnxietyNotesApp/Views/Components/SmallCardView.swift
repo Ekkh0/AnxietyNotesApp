@@ -38,9 +38,7 @@ struct SmallCardView: View {
             .padding(.horizontal, 25)
         }
         .frame(width: 361, height: 65)
-        .background(Color(UIColor.systemBackground))
+        .background(Color(UIColor.tertiarySystemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 20))
-        .shadow(color: Color(UIColor.label).opacity(0.07), radius: 10, x: 0, y: 3)
-        //.padding(5)
     }
 }

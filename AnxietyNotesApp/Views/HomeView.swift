@@ -13,6 +13,7 @@ struct HomeView: View {
     
     var body: some View {
             ZStack{
+                
                 VStack {
                     if viewModel.notes.isEmpty{
                         VStack{
@@ -82,7 +83,7 @@ struct HomeView: View {
                             SmallCardView(note: note)
                                 .listRowSeparator(.hidden)
                                 .listSectionSeparator(.hidden)
-                                
+                                .listRowBackground(Color.clear)
                                 .overlay{
                                     NavigationLink(destination: NoteView(note: note)) {
                                         EmptyView()
@@ -105,6 +106,7 @@ struct HomeView: View {
                     
 //                }
             }
+            .background(Color.bg)
             .onChange(of: viewModel.notes) {
                 for note in viewModel.notes{
                     print(note.id.uuidString)
