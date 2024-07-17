@@ -41,8 +41,8 @@ struct MediumView: View {
                             return [.black, .white]
                         }
                     }()
-//                    Link(destination: URL(string: colors[0] != .black ?  "noteinmood://newNote?noteID=\(notes[index]?.id.uuidString ?? "")" : "noteinmood://newNote")!){
-                    Link(destination: URL(string: "noteinmood://newNote?noteID=73BF3940-AE23-45D0-9D6E-E7E1911AB2FF")!){
+                    Link(destination: URL(string: colors[0] != .black ?  "noteinmood://newNote?noteID=\(notes[index]?.id.uuidString ?? "")" : "noteinmood://newNote")!){
+//                    Link(destination: URL(string: "noteinmood://newNote?noteID=73BF3940-AE23-45D0-9D6E-E7E1911AB2FF")!){
                         if colors[0] != .black{
                             Circle()
                                 .fill(

@@ -4,9 +4,6 @@
     "" : {
 
     },
-    "%@" : {
-
-    },
     "Back" : {
       "localizations" : {
         "id" : {
@@ -107,7 +104,6 @@
       }
     },
     "Title..." : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {

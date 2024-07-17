@@ -19,11 +19,8 @@
 		5FEE43B02C3FBAEB0084CC3A /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43AD2C3FBAEB0084CC3A /* NoteViewModel.swift */; };
 		5FEE43B32C3FBB140084CC3A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43B22C3FBB140084CC3A /* String.swift */; };
 		5FF988812C4128DA00F6F658 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF9887D2C4128DA00F6F658 /* GradientBackground.swift */; };
-		5FF988822C4128DA00F6F658 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF9887E2C4128DA00F6F658 /* CardView.swift */; };
-		5FF988832C4128DA00F6F658 /* AddNoteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF9887F2C4128DA00F6F658 /* AddNoteButtonView.swift */; };
 		5FF988842C4128DA00F6F658 /* SmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF988802C4128DA00F6F658 /* SmallCardView.swift */; };
 		5FF988862C4128E600F6F658 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF988852C4128E600F6F658 /* HomeView.swift */; };
-		5FF988882C4128FE00F6F658 /* ButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF988872C4128FE00F6F658 /* ButtonViewModel.swift */; };
 		5FF9888A2C41290500F6F658 /* GradientBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF988892C41290500F6F658 /* GradientBackgroundViewModel.swift */; };
 		5FF9888C2C41293600F6F658 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5FF9888B2C41293600F6F658 /* Localizable.xcstrings */; };
 		BF44265B2C4544420009DED4 /* AccessoryCircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44265A2C4544420009DED4 /* AccessoryCircularView.swift */; };
@@ -82,11 +79,8 @@
 		5FEE43AD2C3FBAEB0084CC3A /* NoteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		5FEE43B22C3FBB140084CC3A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		5FF9887D2C4128DA00F6F658 /* GradientBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
-		5FF9887E2C4128DA00F6F658 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		5FF9887F2C4128DA00F6F658 /* AddNoteButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteButtonView.swift; sourceTree = "<group>"; };
 		5FF988802C4128DA00F6F658 /* SmallCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallCardView.swift; sourceTree = "<group>"; };
 		5FF988852C4128E600F6F658 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		5FF988872C4128FE00F6F658 /* ButtonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewModel.swift; sourceTree = "<group>"; };
 		5FF988892C41290500F6F658 /* GradientBackgroundViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBackgroundViewModel.swift; sourceTree = "<group>"; };
 		5FF9888B2C41293600F6F658 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = AnxietyNotesApp/Localizable.xcstrings; sourceTree = SOURCE_ROOT; };
 		5FF9888D2C45042300F6F658 /* NewNoteWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NewNoteWidgetExtension.entitlements; sourceTree = "<group>"; };
@@ -217,7 +211,6 @@
 			children = (
 				5FEE43C52C4125A40084CC3A /* Components */,
 				5FEE43AD2C3FBAEB0084CC3A /* NoteViewModel.swift */,
-				5FF988872C4128FE00F6F658 /* ButtonViewModel.swift */,
 				BF8E06BE2C4236C300DF5234 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
@@ -234,8 +227,6 @@
 		5FEE43CB2C4125B00084CC3A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5FF9887F2C4128DA00F6F658 /* AddNoteButtonView.swift */,
-				5FF9887E2C4128DA00F6F658 /* CardView.swift */,
 				5FF9887D2C4128DA00F6F658 /* GradientBackground.swift */,
 				5FF988802C4128DA00F6F658 /* SmallCardView.swift */,
 			);
@@ -402,14 +393,11 @@
 				D94930D32C44EB14005C203A /* SaveNoteView.swift in Sources */,
 				5F7C4DE52C3BF43E00182C18 /* AnxietyNotesAppApp.swift in Sources */,
 				5FF988842C4128DA00F6F658 /* SmallCardView.swift in Sources */,
-				5FF988882C4128FE00F6F658 /* ButtonViewModel.swift in Sources */,
-				5FF988822C4128DA00F6F658 /* CardView.swift in Sources */,
 				5FEE43A72C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel in Sources */,
 				BF8E06BD2C4234C800DF5234 /* SwiftDataService.swift in Sources */,
 				5FF9888A2C41290500F6F658 /* GradientBackgroundViewModel.swift in Sources */,
 				5F7C4DF62C3D03B800182C18 /* Feelings.swift in Sources */,
 				5FEE43A62C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel in Sources */,
-				5FF988832C4128DA00F6F658 /* AddNoteButtonView.swift in Sources */,
 				5F7C4DF82C3D16AD00182C18 /* Notes.swift in Sources */,
 				5FF988812C4128DA00F6F658 /* GradientBackground.swift in Sources */,
 			);
@@ -579,8 +567,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -620,8 +607,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";

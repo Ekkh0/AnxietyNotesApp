@@ -19,6 +19,7 @@ struct HomeView: View {
     
     var body: some View {
             ZStack{
+                
                 VStack {
                     if viewModel.notes.isEmpty{
                         VStack{
@@ -89,7 +90,7 @@ struct HomeView: View {
                             SmallCardView(note: note)
                                 .listRowSeparator(.hidden)
                                 .listSectionSeparator(.hidden)
-                                
+                                .listRowBackground(Color.clear)
                                 .overlay{
                                     NavigationLink(destination: NoteView(note: note)) {
                                         EmptyView()
@@ -109,7 +110,10 @@ struct HomeView: View {
                         }
                     }
                     .listStyle(.plain)
-                    
+                    .searchable(text: $viewModel.searchText, isPresented: $viewModel.searchIsActive, placement: .navigationBarDrawer(displayMode: .always))
+                    .onChange(of: viewModel.searchText) { oldValue, newValue in
+                        viewModel.searchNote()
+                    }
 //                }
             }
             .onChange(of: selectedPicker) {
@@ -120,14 +124,12 @@ struct HomeView: View {
                 }
                 else{
                     viewModel.fetchNotesByEmotion()
+                    viewModel.fetchNotesByEmotion()
                 }
             }
         }
 
     }
-    
-    
-
 
 #Preview {
     HomeView()

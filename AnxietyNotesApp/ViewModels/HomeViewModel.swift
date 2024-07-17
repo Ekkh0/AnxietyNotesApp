@@ -55,5 +55,12 @@ extension HomeView{
         func deleteNote(note: Note){
             dataSource.deleteNote(note: note)
         }
+        
+        func searchNote(){
+            fetchNotes()
+            if searchText != ""{
+                notes = notes.filter{($0.content?.lowercased().contains(searchText.lowercased())) ?? false || ($0.title?.lowercased().contains(searchText.lowercased())) ?? false}
+            }
+        }
     }
 }
