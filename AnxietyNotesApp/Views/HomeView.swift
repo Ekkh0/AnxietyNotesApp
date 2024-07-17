@@ -8,8 +8,6 @@ struct HomeView: View {
     
     init() {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.indigo]
-        let notes = SwiftDataService.shared.fetchNotesForCurrentWeek()
-        var num = 1
     }
     
     var body: some View {
@@ -104,7 +102,7 @@ struct HomeView: View {
             }
             .onChange(of: viewModel.notes) {
                 for note in viewModel.notes{
-                    print(note.title ?? "")
+                    print(note.id.uuidString)
                 }
             }
         }
