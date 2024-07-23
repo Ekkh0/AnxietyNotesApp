@@ -4,6 +4,7 @@ import SwiftUI
 struct NoteView: View {
     @State private var viewModel: ViewModel
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var router: Router
     
     init(note: Note? = nil){
         _viewModel = State(initialValue: ViewModel(datasource: .shared, note: note))
@@ -59,7 +60,7 @@ struct NoteView: View {
                     Button("Done") {
                         viewModel.saveNote()
                         HomeView.ViewModel.shared.fetchNotes()
-                        viewModel.navigateToSaveNote = true
+                        router.navigate(to: .saveNoteView)
                     }
                     .foregroundColor(viewModel.text.isEmpty ? Color.gray : Color.indigo)
                     .disabled(viewModel.text.isEmpty)
@@ -70,14 +71,6 @@ struct NoteView: View {
             GradientBackground(feeling: $viewModel.feeling)
         )
         .ignoresSafeArea(.keyboard)
-        
-        NavigationLink(
-            destination: SaveNoteView(),
-            isActive: $viewModel.navigateToSaveNote,
-            label: {
-                EmptyView()
-            })
-//        .navigationBarBackButtonHidden(true)
     }
 }
 

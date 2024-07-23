@@ -24,11 +24,9 @@ extension NoteView{
         var emoModel : NLModel?{
             let language = UserDefaults.standard.object(forKey: "AppleLanguages") as? [String]
             if let language = language, language.first == "id"{
-                print("model dalam bahasa indonesia")
-                return try? NLModel(mlModel: SentenceEmoEnglish(configuration: MLModelConfiguration()).model)
-            }else{
-                print("model dalam bahasa inggris")
                 return try? NLModel(mlModel: SentenceEmoIndo(configuration: MLModelConfiguration()).model)
+            }else{
+                return try? NLModel(mlModel: SentenceEmoEnglish(configuration: MLModelConfiguration()).model)
             }
         }
         

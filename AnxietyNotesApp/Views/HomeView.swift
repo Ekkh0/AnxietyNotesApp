@@ -3,8 +3,8 @@ import WidgetKit
 
 struct HomeView: View {
     @State private var viewModel = HomeView.ViewModel.shared
-    var sorter = ["All", "Neutral", "Happy", "Sad", "Fear", "Anger"]
-    @State private var selectedPicker = "Latest" {
+    var sorter = ["All", "Neutral", "Joy", "Sad", "Fear", "Anger"]
+    @State private var selectedPicker = "All" {
         didSet {
             print("Changed")
             viewModel.selectedEmotion = selectedPicker
@@ -113,15 +113,8 @@ struct HomeView: View {
         }
         .background(Color.bg)
         .onChange(of: selectedPicker) {
-            print("Changed")
             viewModel.selectedEmotion = selectedPicker
-            if selectedPicker == "All"{
-                viewModel.fetchNotes()
-            }
-            else{
-                viewModel.fetchNotesByEmotion()
-                viewModel.fetchNotesByEmotion()
-            }
+            viewModel.fetchNotesByEmotion()
         }
     }
     

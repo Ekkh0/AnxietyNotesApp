@@ -14,15 +14,15 @@ enum Feelings: String{
     var feelingColor: [Color] {
         switch self{
         case .neutral:
-            return [.white, .white]
+            return [.neutral1, .neutral2]
         case .happy:
-            return [.yellow, .orange.opacity(0.5)]
+            return [.happy1, .happy2]
         case .sad:
-            return [.blue, .cyan.opacity(0.5)]
+            return [.sad1, .sad2]
         case .fear:
-            return [.purple, .indigo.opacity(0.5)]
+            return [.fear1, .fear2]
         case .anger:
-            return [.red, .pink.opacity(0.5)]
+            return [.angry1, .angry2]
         }
     }
     

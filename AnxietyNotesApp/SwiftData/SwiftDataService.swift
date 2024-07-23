@@ -34,6 +34,11 @@ class SwiftDataService{
     
     // New method to fetch notes by emotion
      func fetchNotesByEmotion(emotion: String) -> [Note] {
+         
+         if emotion == "All"{
+             return fetchNotes()
+         }
+         
          var fetchDescriptor = FetchDescriptor<Note>()
          fetchDescriptor.predicate = #Predicate { note in
              note.sumEmotion == emotion
@@ -103,8 +108,6 @@ class SwiftDataService{
             fatalError("Failed to fetch note by id: \(error.localizedDescription)")
         }
     }
-    
-
     
     func deleteNote(note: Note) {
         modelContext.delete(note)

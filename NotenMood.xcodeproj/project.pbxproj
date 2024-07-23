@@ -14,6 +14,7 @@
 		5F7C4DED2C3BF43F00182C18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F7C4DEC2C3BF43F00182C18 /* Preview Assets.xcassets */; };
 		5F7C4DF62C3D03B800182C18 /* Feelings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF52C3D03B800182C18 /* Feelings.swift */; };
 		5F7C4DF82C3D16AD00182C18 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF72C3D16AD00182C18 /* Notes.swift */; };
+		5F829F592C4F6D0400473797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F7C4DE82C3BF43F00182C18 /* Assets.xcassets */; };
 		5FEE43A62C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43A42C3FAAE20084CC3A /* SentenceEmoEnglish.mlmodel */; };
 		5FEE43A72C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43A52C3FAAE20084CC3A /* SentenceEmoIndo.mlmodel */; };
 		5FEE43B02C3FBAEB0084CC3A /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE43AD2C3FBAEB0084CC3A /* NoteViewModel.swift */; };
@@ -373,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F0954722C468B690066B91B /* Localizable.xcstrings in Resources */,
+				5F829F592C4F6D0400473797 /* Assets.xcassets in Resources */,
 				BF8E06DF2C427E2800DF5234 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,7 +552,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AnxietyNotesApp/AnxietyNotesApp.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
@@ -590,7 +591,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AnxietyNotesApp/AnxietyNotesApp.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";

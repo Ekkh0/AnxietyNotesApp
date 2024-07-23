@@ -13,6 +13,7 @@ final class Router: ObservableObject {
     public enum Destination: Codable, Hashable {
         case homeView
         case noteView(noteID: UUID?)
+        case saveNoteView
     }
     
     @Published var navPath = NavigationPath()

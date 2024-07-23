@@ -17,14 +17,19 @@ struct SmallCardView: View {
                 if let note = note{
                     VStack(alignment: .leading){
                         Text(note.title!)
-                            .opacity(0.75)
                             .font(.title2)
                             .fontWeight(.semibold)
                             .lineLimit(1)
-                        Text(note.content!)
-                            .opacity(0.75)
-                            .font(.caption)
-                            .lineLimit(1)
+                        HStack{
+                            Text(DateFormatter.localizedString(from: note.date, dateStyle: .short, timeStyle: .none))
+                                .opacity(0.75)
+                                .font(.caption)
+                                .padding(.trailing, 1)
+                            Text(note.content!)
+                                .opacity(0.75)
+                                .font(.caption)
+                                .lineLimit(1)
+                        }
                     }
                 }
                 Spacer()
