@@ -52,6 +52,7 @@ struct NoteView: View {
             .padding(8)
             //GRADIENT ANIMATED BG
         }
+        .animation(nil)
         .toolbarTitleDisplayMode(.inline)
         .navigationTitle(viewModel.note != nil ? viewModel.getDateString(date: (viewModel.note?.date)!) : viewModel.currentDateString())
         .toolbar{
