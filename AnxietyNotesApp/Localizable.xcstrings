@@ -4,6 +4,19 @@
     "" : {
 
     },
+    "%@ Mood" : {
+
+    },
+    "Anger is a valid emotion\nSit down a while relieve it" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kemarahan adalah emosi yang valid\nDuduklah sebentar untuk meredakannya"
+          }
+        }
+      }
+    },
     "Back" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -11,6 +24,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kembali"
+          }
+        }
+      }
+    },
+    "Breathe In, Breathe Out\nEverything is gonna be fine today" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tarik Nafas, Buang Nafas\nSemuanya akan baik-baik saja hari ini"
           }
         }
       }
@@ -44,6 +67,26 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "Bagaimana harimu?"
+          }
+        }
+      }
+    },
+    "Human is full of emotion\nStay yourself away from negativity" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manusia penuh dengan emosi\nJauhi diri Anda dari hal-hal negatif"
+          }
+        }
+      }
+    },
+    "It’s okay to feel sad \nRemember to stay calm today" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak apa-apa untuk merasa sedih \nIngatlah untuk tetap tenang hari ini"
           }
         }
       }
@@ -85,6 +128,7 @@
       }
     },
     "Take a deep breath \nand feel the relief" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -130,6 +174,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tulis!"
+          }
+        }
+      }
+    },
+    "You have eased your anxiety!\nKeep your happy mood today" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anda telah meredakan kecemasan Anda!\nJagalah suasana hati bahagiamu hari ini"
           }
         }
       }

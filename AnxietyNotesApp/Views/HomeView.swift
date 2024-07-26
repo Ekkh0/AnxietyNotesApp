@@ -3,14 +3,6 @@ import WidgetKit
 
 struct HomeView: View {
     @State private var viewModel = HomeView.ViewModel.shared
-    var sorter = ["All", "Neutral", "Joy", "Sad", "Fear", "Anger"]
-    @State private var selectedPicker = "All" {
-        didSet {
-            print("Changed")
-            viewModel.selectedEmotion = selectedPicker
-            viewModel.fetchNotesByEmotion()
-        }
-    }
     @EnvironmentObject var router: Router
     
     init() {
@@ -58,8 +50,8 @@ struct HomeView: View {
                     }
                     .popover(isPresented: $viewModel.showingPopover) {
                         List {
-                            Picker("Sort By: ", selection: $selectedPicker) {
-                                ForEach(sorter, id: \.self) {
+                            Picker("Sort By: ", selection: $viewModel.selectedPicker) {
+                                ForEach(viewModel.sorter, id: \.self) {
                                     Text($0)
                                 }
                             }
@@ -112,8 +104,8 @@ struct HomeView: View {
             //                }
         }
         .background(Color.bg)
-        .onChange(of: selectedPicker) {
-            viewModel.selectedEmotion = selectedPicker
+        .onChange(of: viewModel.selectedPicker) {
+            viewModel.selectedEmotion = viewModel.selectedPicker
             viewModel.fetchNotesByEmotion()
         }
     }

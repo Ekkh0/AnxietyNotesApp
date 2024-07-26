@@ -35,6 +35,8 @@
 		BF8E06DD2C427E2600DF5234 /* NewNoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8E06DC2C427E2600DF5234 /* NewNoteWidget.swift */; };
 		BF8E06DF2C427E2800DF5234 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF8E06DE2C427E2800DF5234 /* Assets.xcassets */; };
 		BF8E06E32C427E2800DF5234 /* NewNoteWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BF8E06D32C427E2600DF5234 /* NewNoteWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BFCFC3002C538AFF00AB5A69 /* SaveNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCFC2FF2C538AFF00AB5A69 /* SaveNoteViewModel.swift */; };
+		BFCFC3022C53AB7400AB5A69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F7C4DE82C3BF43F00182C18 /* Assets.xcassets */; };
 		D94930CD2C43E66D005C203A /* SwiftDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8E06BC2C4234C800DF5234 /* SwiftDataService.swift */; };
 		D94930CE2C43E676005C203A /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF72C3D16AD00182C18 /* Notes.swift */; };
 		D94930CF2C43E679005C203A /* Feelings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7C4DF52C3D03B800182C18 /* Feelings.swift */; };
@@ -98,6 +100,7 @@
 		BF8E06DC2C427E2600DF5234 /* NewNoteWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteWidget.swift; sourceTree = "<group>"; };
 		BF8E06DE2C427E2800DF5234 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF8E06E02C427E2800DF5234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFCFC2FF2C538AFF00AB5A69 /* SaveNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNoteViewModel.swift; sourceTree = "<group>"; };
 		D94930D22C44EB14005C203A /* SaveNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,6 +215,7 @@
 				5FEE43C52C4125A40084CC3A /* Components */,
 				5FEE43AD2C3FBAEB0084CC3A /* NoteViewModel.swift */,
 				BF8E06BE2C4236C300DF5234 /* HomeViewModel.swift */,
+				BFCFC2FF2C538AFF00AB5A69 /* SaveNoteViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -373,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F0954722C468B690066B91B /* Localizable.xcstrings in Resources */,
+				BFCFC3022C53AB7400AB5A69 /* Assets.xcassets in Resources */,
 				BF8E06DF2C427E2800DF5234 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +394,7 @@
 				5FEE43B32C3FBB140084CC3A /* String.swift in Sources */,
 				5FF988862C4128E600F6F658 /* HomeView.swift in Sources */,
 				BF8E06CD2C427D6700DF5234 /* Router.swift in Sources */,
+				BFCFC3002C538AFF00AB5A69 /* SaveNoteViewModel.swift in Sources */,
 				5F7C4DE72C3BF43E00182C18 /* NoteView.swift in Sources */,
 				D94930D32C44EB14005C203A /* SaveNoteView.swift in Sources */,
 				5F7C4DE52C3BF43E00182C18 /* AnxietyNotesAppApp.swift in Sources */,
@@ -553,7 +559,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = RHGD2V8746;
+				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -592,7 +598,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AnxietyNotesApp/Preview Content\"";
-				DEVELOPMENT_TEAM = RHGD2V8746;
+				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -629,7 +635,7 @@
 				CODE_SIGN_ENTITLEMENTS = NewNoteWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RHGD2V8746;
+				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewNoteWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NewNoteWidget;
@@ -659,7 +665,7 @@
 				CODE_SIGN_ENTITLEMENTS = NewNoteWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RHGD2V8746;
+				DEVELOPMENT_TEAM = 7DK5H7RWQJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewNoteWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NewNoteWidget;

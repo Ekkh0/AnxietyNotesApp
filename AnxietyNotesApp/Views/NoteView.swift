@@ -60,7 +60,7 @@ struct NoteView: View {
                     Button("Done") {
                         viewModel.saveNote()
                         HomeView.ViewModel.shared.fetchNotes()
-                        router.navigate(to: .saveNoteView)
+                        router.navigate(to: .saveNoteView(feeling: viewModel.feeling))
                     }
                     .foregroundColor(viewModel.text.isEmpty ? Color.gray : Color.indigo)
                     .disabled(viewModel.text.isEmpty)
