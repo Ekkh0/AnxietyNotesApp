@@ -24,7 +24,14 @@ extension HomeView{
         }
         var searchText = ""
         var searchIsActive = false
-                
+        var sorter = ["All", "Neutral", "Joy", "Sad", "Fear", "Anger"]
+        var selectedPicker = "All" {
+            didSet {
+                print("Changed")
+                selectedEmotion = selectedPicker
+                fetchNotesByEmotion()
+            }
+        }
         
         private init(dataSource: SwiftDataService){
             self.dataSource = dataSource

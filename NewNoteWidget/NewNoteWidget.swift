@@ -33,7 +33,7 @@ struct Provider: TimelineProvider {
             let entry = SimpleEntry(date: currentDate, notes: notes)
             entries.append(entry)
             
-            let timeline = Timeline(entries: entries, policy: .never)
+            let timeline = Timeline(entries: entries, policy: .atEnd)
             completion(timeline)
         }
     }

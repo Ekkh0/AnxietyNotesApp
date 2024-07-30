@@ -27,6 +27,7 @@
 		BF44265B2C4544420009DED4 /* AccessoryCircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44265A2C4544420009DED4 /* AccessoryCircularView.swift */; };
 		BF44265D2C45449B0009DED4 /* SmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44265C2C45449B0009DED4 /* SmallView.swift */; };
 		BF44265F2C455AAC0009DED4 /* MediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44265E2C455AAC0009DED4 /* MediumView.swift */; };
+		BF6E0E542C58C40100964FAA /* SaveNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6E0E532C58C40100964FAA /* SaveNoteViewModel.swift */; };
 		BF8E06BD2C4234C800DF5234 /* SwiftDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8E06BC2C4234C800DF5234 /* SwiftDataService.swift */; };
 		BF8E06BF2C4236C300DF5234 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8E06BE2C4236C300DF5234 /* HomeViewModel.swift */; };
 		BF8E06CD2C427D6700DF5234 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8E06CC2C427D6700DF5234 /* Router.swift */; };
@@ -88,6 +89,7 @@
 		BF44265A2C4544420009DED4 /* AccessoryCircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryCircularView.swift; sourceTree = "<group>"; };
 		BF44265C2C45449B0009DED4 /* SmallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallView.swift; sourceTree = "<group>"; };
 		BF44265E2C455AAC0009DED4 /* MediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumView.swift; sourceTree = "<group>"; };
+		BF6E0E532C58C40100964FAA /* SaveNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNoteViewModel.swift; sourceTree = "<group>"; };
 		BF8E06BC2C4234C800DF5234 /* SwiftDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataService.swift; sourceTree = "<group>"; };
 		BF8E06BE2C4236C300DF5234 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BF8E06CC2C427D6700DF5234 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				5FEE43C52C4125A40084CC3A /* Components */,
 				5FEE43AD2C3FBAEB0084CC3A /* NoteViewModel.swift */,
 				BF8E06BE2C4236C300DF5234 /* HomeViewModel.swift */,
+				BF6E0E532C58C40100964FAA /* SaveNoteViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				5FEE43B32C3FBB140084CC3A /* String.swift in Sources */,
 				5FF988862C4128E600F6F658 /* HomeView.swift in Sources */,
 				BF8E06CD2C427D6700DF5234 /* Router.swift in Sources */,
+				BF6E0E542C58C40100964FAA /* SaveNoteViewModel.swift in Sources */,
 				5F7C4DE72C3BF43E00182C18 /* NoteView.swift in Sources */,
 				D94930D32C44EB14005C203A /* SaveNoteView.swift in Sources */,
 				5F7C4DE52C3BF43E00182C18 /* AnxietyNotesAppApp.swift in Sources */,
