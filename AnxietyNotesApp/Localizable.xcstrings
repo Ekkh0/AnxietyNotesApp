@@ -51,7 +51,11 @@
     "Quick New Notes" : {
 
     },
+    "Save Note" : {
+
+    },
     "Save Notes" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
