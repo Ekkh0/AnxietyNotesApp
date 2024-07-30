@@ -12,14 +12,14 @@ extension GradientBackground{
     @Observable
     class ViewModel{
         var angle: Double = 0
-        var firstColor: Color? = .white
-        var secondColor: Color? = .white
+        var firstColor: Color = .neutral1
+        var secondColor: Color = .neutral2
         
         func changeColor(mood: String?){
             let feelingColor = Feelings(label: mood)?.feelingColor
             withAnimation(.easeOut(duration: 2)) {
-                firstColor = feelingColor?[0]
-                secondColor = feelingColor?[1]
+                firstColor = feelingColor![0]
+                secondColor = feelingColor![1]
             }
         }
     }

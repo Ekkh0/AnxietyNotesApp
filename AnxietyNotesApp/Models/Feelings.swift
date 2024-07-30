@@ -28,15 +28,15 @@ enum Feelings: String{
     
     init?(label: String?) {
         switch label {
-        case "Neutral":
+        case "Neutral", "neutral":
             self = .neutral
-        case "Joy":
+        case "Joy", "joy":
             self = .happy
-        case "Sad", "Sadness":
+        case "Sad", "sadness":
             self = .sad
-        case "Fear":
+        case "Fear", "fear":
             self = .fear
-        case "Anger":
+        case "Anger", "anger":
             self = .anger
         default:
             return nil

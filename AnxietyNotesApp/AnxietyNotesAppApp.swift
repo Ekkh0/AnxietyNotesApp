@@ -26,8 +26,8 @@ struct AnxietyNotesAppApp: App {
                             } else {
                                 NoteView()
                             }
-                        case .saveNoteView:
-                            SaveNoteView()
+                        case .saveNoteView(let feeling):
+                            SaveNoteView(feeling: feeling)
                         }
                     }
             }

@@ -14,7 +14,7 @@ struct GradientBackground: View{
     
     var body: some View{
         ZStack{
-            AngularGradient(colors: [viewModel.firstColor!, viewModel.secondColor!, viewModel.firstColor!], center: .center)
+            AngularGradient(colors: [viewModel.firstColor, viewModel.secondColor, viewModel.firstColor], center: .center)
                 .rotationEffect(Angle(degrees: viewModel.angle))
                 .onAppear{
                     Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: { _ in
@@ -25,9 +25,6 @@ struct GradientBackground: View{
                 }
                 .edgesIgnoringSafeArea(.all)
                 .frame(width: 1400, height: 1400)
-                .onAppear(){
-                    viewModel.changeColor(mood: feeling)
-                }
                 .onChange(of: feeling) { oldValue, newValue in
                     viewModel.changeColor(mood: feeling)
                 }
