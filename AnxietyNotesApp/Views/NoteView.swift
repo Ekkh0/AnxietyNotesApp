@@ -71,6 +71,7 @@ struct NoteView: View {
             GradientBackground(feeling: $viewModel.feeling)
         )
         .ignoresSafeArea(.keyboard)
+        .animation(nil)
     }
 }
 
